@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: white;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.container {
+    width: 660px;
+    background-color: white;
+    display: flex;
+    height: 470px;
+    border-radius: 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.box1 {
+    flex: 1.3;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.result {
+    opacity: 0.6;
+    font-size: 22px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    letter-spacing: 0.6px;
+}
+
+.circle {
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.circle .bigPercentage {
+    font-size: 65px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 0.9;
+    margin-bottom: 5px;
+    margin-top: 18px;
+}
+
+.circle .smallPercentage {
+    margin: 0;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.box1 h1 {
+    margin-top: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.box1 .score {
+    font-size: 16px;
+    padding: 0 50px;
+    margin-top: 0;
+    opacity: 0.7;
+}
+
+.box2 {
+    flex: 1;
+    padding: 30px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.creation {
+    display: flex;
+}
+
+
+.box2 h2 {
+    color: rgb(26, 26, 26);
+    margin-top: 0px;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+
+.sec {
+    padding: 0px 15px;
+    border-radius: 10px;
+    margin: 0 5px 20px 5px;
+}
+
+.sec h3 {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.sec .score {
+    color: rgb(157, 157, 157);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.sec .score strong {
+    color: black;
+    padding-right: 5px;
+}
+
+.sec img {
+    margin-right: 10px;
+}
+
+.sec1 {
+    color: hsla(0, 100%, 67%, 0.9);
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.sec2 {
+    color: hsla(39, 100%, 56%, 0.9);
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.sec3 {
+    color: hsla(166, 100%, 37%, 0.9);
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.sec4 {
+    color: hsla(234, 85%, 45%, 0.9);
+    background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.box2 button {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 15px;
+    border-radius: 40px;
+    border: none;
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
