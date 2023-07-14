@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --primary-soft: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--main-bg);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+}
+
+.container {
+    width: 250px;
+    min-height: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--card-bg);
+}
+
+.nft {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nft::after {
+    opacity: 0;
+    z-index: 1;
+    background-color: rgba(0, 255, 247, 0.2);
+}
+
+.nft:hover .nft::after {
+    opacity: 1;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.heading:hover {
+    color: var(--primary-cyan);
+}
+
+.desc {
+    color: var(--primary-soft);
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: var(--primary-cyan);
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+.price img {
+    width: 10px;
+    margin-right: 5px;
+}
+
+.remaining img {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.remaining span {
+    color: var(--primary-soft);
+    font-weight: 300;
+}
+
+.line {
+    background-color: var(--line);
+    width: 100%;
+    height: 1px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer img {
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 15px;
+}
+
+.footer p {
+    font-size: 13px;
+    color: var(--primary-soft);
+    font-weight: 300;
+}
+
+.highlighted {
+    color: white;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.highlighted:hover {
+    color: var(--primary-cyan);
+}
+
+
+
+
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(0, 255, 247, 0.4);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GLOBAL */
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
