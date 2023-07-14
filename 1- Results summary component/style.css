@@ -169,3 +169,24 @@ body {
     letter-spacing: 0.5px;
     margin-top: 10px;
 }
+
+@media(max-width:768px) {
+
+    body {
+        overflow: auto;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .box1 {
+        border-radius: 0 0 30px 30px;
+    }
+
+    .box1 p {
+        margin-bottom: 40px;
+    }
+}
