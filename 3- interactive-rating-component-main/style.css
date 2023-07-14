@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    background-color: hsl(216, 12%, 8%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Overpass", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: rgb(37, 45, 55);
+    background: radial-gradient(circle, rgba(37, 45, 55, 1) 0%, rgba(25, 30, 36, 1) 100%);
+    width: 450px;
+    min-height: 450px;
+    padding: 35px;
+    border-radius: 30px;
+}
+
+img {
+    width: 17px;
+}
+
+.circle {
+    background-color: #262E38;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.heading {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.description {
+    opacity: 0.5;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.numberButton {
+    background-color: #262E38;
+    padding: 25px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    color: rgba(255, 255, 255, 0.563);
+    font-size: 17px;
+    font-family: inherit;
+    line-height: 0.5;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.numberButton:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+.numberButton:active {
+    transform: scale(0.95);
+}
+
+#submitButton {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 17px;
+    letter-spacing: 1.6px;
+    font-family: inherit;
+    background-color: hsl(25, 97%, 53%);
+    border: none;
+    padding: 15px 0;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#submitButton:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+
+.alertContainer {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background-color: hsl(25, 97%, 53%);
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: default;
+    transition: 0.4s;
+    font-family: inherit;
+}
+
+
+
+
+/* ACTİVE STATES */
+
+.colorGray {
+    background-color: hsl(217, 12%, 63%) !important;
+    color: white;
+}
+
+.deactive {
+    display: none !important;
+}
+
+.alertActive {
+    right: -210px;
+}
+
+
+
+
+
+/* SECOND PART */
+
+#secondBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#secondBox img {
+    width: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.result {
+    background-color: #262E38;
+    padding: 10px 25px;
+    border-radius: 20px;
+    color: hsl(25, 97%, 53%);
+    margin-bottom: 0;
+}
+
+.secondDes {
+    margin-top: 15px;
+}
+
+.secondHeading {
+    margin-top: 35px;
+}
+
+
+
+@media(max-width:500px) {
+    .container {
+        width: 90%;
+    }
+
+    .numberButton {
+        padding: 20px;
+    }
+
+    #submitButton {
+        margin-top: 25px;
+    }
+}

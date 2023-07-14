@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="" id="firstBox">
+            <div class="circle">
+                <img src="./images/icon-star.svg" alt="star">
+            </div>
+
+            <h2 class="heading">How did we do?</h2>
+            <p class="description">Please let us know how we did with your support request. All feedback is appreciated
+                to
+                help us improve our
+                offering!</p>
+            <form id="myForm">
+                <div class="buttons">
+                    <button type="button" class="numberButton" value="1">1</button>
+                    <button type="button" class="numberButton" value="2">2</button>
+                    <button type="button" class="numberButton" value="3">3</button>
+                    <button type="button" class="numberButton" value="4">4</button>
+                    <button type="button" class="numberButton" value="5">5</button>
+                </div>
+                <button type="submit" id="submitButton">SUBMIT</button>
+            </form>
+        </div>
+
+        <div class="deactive" id="secondBox">
+            <img src="./images/illustration-thank-you.svg" alt="Thanks">
+            <p class="result">You selected <span id="point">4</span> out of 5</p>
+            <h2 class="heading secondHeading">Thank You!</h2>
+            <p class="description secondDes">We appreciate you taking the time to give a rating. If you ever need more
+                support,
+                don’t hesitate to get in touch!</p>
+        </div>
+    </div>
+
+    <div class="alertContainer alertActive" id="alertContainer">
+        You didn't give a rating
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
