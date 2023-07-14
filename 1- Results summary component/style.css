@@ -141,21 +141,25 @@ body {
 .sec1 {
     color: hsla(0, 100%, 67%, 0.9);
     background-color: hsla(0, 100%, 67%, 0.1);
+    cursor: url(./assets/images/icon-reaction.svg), auto;
 }
 
 .sec2 {
     color: hsla(39, 100%, 56%, 0.9);
     background-color: hsla(39, 100%, 56%, 0.1);
+    cursor: url(./assets/images/icon-memory.svg), auto;
 }
 
 .sec3 {
     color: hsla(166, 100%, 37%, 0.9);
     background-color: hsla(166, 100%, 37%, 0.1);
+    cursor: url(./assets/images/icon-verbal.svg), auto;
 }
 
 .sec4 {
     color: hsla(234, 85%, 45%, 0.9);
     background-color: hsl(234, 85%, 45%, 0.1);
+    cursor: url(./assets/images/icon-visual.svg), auto;
 }
 
 .box2 button {
@@ -168,9 +172,15 @@ body {
     color: white;
     letter-spacing: 0.5px;
     margin-top: 10px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-@media(max-width:768px) {
+.box2 button:hover {
+    background-color: hsl(225, 29%, 16%);
+}
+
+@media(max-width:650px) {
 
     body {
         overflow: auto;
