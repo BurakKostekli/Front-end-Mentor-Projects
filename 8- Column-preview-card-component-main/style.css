@@ -64,6 +64,7 @@ body {
     cursor: pointer;
     border: 2px solid white;
     transition: 0.2s;
+    background-color: white;
 }
 
 .box button:hover {
