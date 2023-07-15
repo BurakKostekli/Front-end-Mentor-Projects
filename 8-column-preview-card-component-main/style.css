@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --orange-: hsl(31, 77%, 52%);
+    --cyan-: hsl(184, 100%, 22%);
+    --dark-cyan-: hsl(179, 100%, 13%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+}
+
+.box {
+    flex: 1;
+    padding: 50px;
+    padding-right: 30px;
+    height: 550px;
+    width: 350px;
+}
+
+.box img {
+    margin-bottom: 30px;
+    width: 70px;
+}
+
+.box h1 {
+    font-family: "Big Shoulders Display", sans-serif;
+    color: white;
+    font-size: 46px;
+    margin-bottom: 30px;
+}
+
+.box p {
+    color: white;
+    font-family: "Lexend Deca", sans-serif;
+    opacity: 0.8;
+    line-height: 1.8;
+    padding-right: 50px;
+    margin-bottom: 95px;
+    font-size: 15px;
+}
+
+.box button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: 0.2s;
+}
+
+.box button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.box1 {
+    background-color: var(--orange-);
+    border-radius: 10px 0 0 10px;
+}
+
+.box2 {
+    background-color: var(--cyan-);
+}
+
+.box3 {
+    background-color: var(--dark-cyan-);
+    border-radius: 0 10px 10px 0;
+    padding-right: 35px;
+}
+
+.box1 button {
+    color: var(--orange-);
+}
+
+.box2 button {
+    color: var(--cyan-);
+}
+
+.box3 button {
+    color: var(--dark-cyan-);
+}
+
+@media(max-width:1020px) {
+    .box p {
+        padding-right: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:768px) {
+    body {
+        width: auto;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .box1 {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .box3 {
+        border-radius: 0 0 10px 10px;
+    }
+}
