@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    --gray-magenta-dark: hsl(303, 10%, 53%);
+    --gray-magenta-light: hsl(300, 24%, 96%);
+}
+
+.pink {
+    color: var(--soft-pink) !important;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    min-width: 1200px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BACKGROUNDS */
+
+.bg-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 700px;
+}
+
+.bg-1 img {
+    width: 100%;
+}
+
+.bg-2 {
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    width: 1150px;
+}
+
+.bg-2 img {
+    width: 100%;
+}
+
+
+/* START */
+
+.container {
+    width: 1150px;
+    height: 650px;
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+
+.box1 {
+    display: flex;
+    height: 53%;
+}
+
+.box2 {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    height: min-content;
+}
+
+
+/* BOX 1 */
+
+
+.contentBox {
+    flex: 1;
+}
+
+.contentBox .heading {
+    color: var(--dark-magenta);
+    padding-right: 150px;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+.contentBox .description {
+    padding-right: 100px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    color: var(--gray-magenta-dark);
+}
+
+.starBoxes {
+    flex: 1;
+    margin-top: 20px;
+    padding-left: 40px;
+}
+
+.starBoxes .starBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    background-color: var(--gray-magenta-light);
+    padding: 18px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--dark-magenta);
+}
+
+.starBoxes .starBox+.starBox {
+    margin-left: 48px;
+}
+
+.starBoxes .starBox+.starBox+.starBox {
+    margin-left: 96px;
+}
+
+.starDesc {
+    padding-left: 40px;
+}
+
+.starBoxes img {
+    margin-right: 3px;
+}
+
+
+
+/* BOX 2 */
+
+.purpleBox {
+    width: 360px;
+    background-color: var(--dark-magenta);
+    height: 250px;
+    padding: 40px 35px;
+    border-radius: 10px;
+}
+
+.cardUp {
+    display: flex;
+    align-items: center;
+}
+
+.cardUp img {
+    width: 42px;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+
+.cardUp .name {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 42px;
+}
+
+.purpleBox .longDesc {
+    color: white;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+.box2 .purpleBox+.purpleBox {
+    margin-top: 20px;
+}
+
+.box2 .purpleBox+.purpleBox+.purpleBox {
+    margin-top: 40px;
+}
+
+@media(max-width:450px) {
+
+    body {
+        min-width: min-content;
+        height: auto;
+    }
+
+    .bg-1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 360px;
+    }
+
+    .bg-1 img {
+        width: 100%;
+    }
+
+    .bg-2 {
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        width: 200px;
+    }
+
+    .bg-2 img {
+        width: 100%;
+    }
+
+    .container {
+        width: 90vw;
+        height: auto;
+        margin: 50px auto;
+    }
+
+    .box1 {
+        flex-direction: column;
+        height: 630px;
+        text-align: center;
+    }
+
+    .box1 .heading {
+        padding-right: 0;
+        padding: 10px 20px;
+        font-size: 2.5rem;
+    }
+
+    .box1 .description {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .box2 {
+        flex-direction: column;
+        justify-content: center;
+        height: max-content;
+        margin-top: 50px;
+    }
+
+    .box2 .purpleBox+.purpleBox {
+        margin-top: 20px;
+    }
+
+    .box2 .purpleBox+.purpleBox+.purpleBox {
+        margin-top: 20px;
+    }
+
+    .starBoxes {
+        padding-left: 0;
+        flex: none;
+        margin-top: 20px;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .starBox {
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100% !important;
+    }
+
+    .starDesc {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .starBoxes .starBox+.starBox {
+        margin-left: 0;
+    }
+
+    .starBoxes .starBox+.starBox+.starBox {
+        margin-left: 0;
+    }
+
+    .contentBox {
+        flex: none;
+    }
+
+    .purpleBox {
+        width: 100%;
+        height: 270px;
+    }
+
+}
