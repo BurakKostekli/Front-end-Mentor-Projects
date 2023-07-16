@@ -114,7 +114,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 400px;
+    width: 450px;
     background-color: var(--gray-magenta-light);
     padding: 18px 30px;
     border-radius: 10px;
@@ -189,6 +189,8 @@ body {
 .box2 .purpleBox+.purpleBox+.purpleBox {
     margin-top: 40px;
 }
+
+
 
 @media(max-width:450px) {
 
