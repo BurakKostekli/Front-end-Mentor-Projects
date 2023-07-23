@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --des-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+
+    --dark-red: hsl(0, 6%, 24%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.image-box {
+    width: 42%;
+    background-image: url(./images/hero-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.content-box {
+    width: 58%;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.middle-box {
+    width: 500px;
+}
+
+.logo {
+    margin-bottom: 180px;
+}
+
+.heading {
+    font-size: 7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 23px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.color {
+    color: var(--des-red);
+    font-weight: 300;
+}
+
+.description {
+    font-size: 1.8rem;
+    color: var(--des-red);
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.type-box {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    height: 65px;
+    font-size: 1.8rem;
+    background: transparent;
+    outline: none;
+    color: black;
+    border: 1px solid rgba(217, 167, 167, 0.769);
+    border-radius: 100px;
+    padding-left: 30px;
+}
+
+.input::placeholder {
+    color: rgba(217, 167, 167, 0.769);
+    ;
+}
+
+.btn {
+    width: 65px;
+    height: 65px;
+    color: white;
+    border-radius: 100px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 25px;
+    background-image: linear-gradient(to right bottom, #f8bfbf, #f6b2b2, #f4a6a5, #f19999, #ee8c8c);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    outline: none;
+    transition: .2s ease-out;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
+}
+
+.btn .arrow {
+    width: 23px;
+    height: 23px;
+    transform: translateX(20%);
+}
+
+.input:focus {
+    background-color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    display: none;
+    position: absolute;
+    top: 17px;
+    right: 30%;
+    width: 30px;
+    height: 30px;
+}
+
+.alert {
+    display: none;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    color: var(--soft-red);
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.border-red {
+    border: 2px solid var(--soft-red);
+    /* type-box */
+}
+
+.form.fault .alert,
+.form.fault .error {
+    display: block;
+}
+
+
+
+
+
+@media(max-width:775px) {
+    body {
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .image-box {
+        background-image: url(./images/hero-mobile.jpg);
+        width: 100%;
+        position: absolute;
+        height: 250px;
+        top: 90px;
+    }
+
+    .logo {
+        width: 120px;
+        margin-left: 30px;
+        margin-bottom: 300px;
+    }
+
+    .content-box {
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    .middle-box {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 40px;
+        letter-spacing: 10px;
+        text-align: center;
+        padding: 50px 60px 0 60px;
+    }
+
+    .description {
+        text-align: center;
+        font-size: 1.4rem;
+        padding: 0 30px;
+    }
+
+    .type-box {
+        width: 90%;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .input {
+        height: 100%;
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        height: 100%;
+        padding: 0 40px;
+    }
+
+}
