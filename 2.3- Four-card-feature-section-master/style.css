@@ -26,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* text-align: center; */
+    text-align: center;
     font-family: "Poppins", sans-serif;
     background-color: var(--light-gray);
     min-width: max-content;
@@ -35,7 +35,7 @@ body {
 /* Bunu koyarak ve minimum genişliği max-content şeklinde girerek width azaldığında yazıların tam olarak ortada kalmasını sağladım. width azalınca body ufak kalıyor ve yazılar kalan body'ye göre ortalanıyordu. */
 .texts {
     margin: 0 auto;
-    width: 450px;
+    width: 550px;
 }
 
 .heading {
