@@ -137,7 +137,7 @@ body {
 @media(max-width:1000px) {
     body {
         justify-content: center;
-        min-height: max-content;
+        height: auto;
     }
 
     .container {
@@ -169,6 +169,10 @@ body {
 }
 
 @media(max-width:550px) {
+
+    body {
+        height: auto;
+    }
 
     .content {
         padding: 2rem 0;
