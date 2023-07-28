@@ -7,15 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const passwordInput = document.querySelector('input[placeholder="Password"]');
 
     form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Formun submit işlemini durdurur.
+        event.preventDefault();
 
-        // İlk başta tüm hata mesajlarını ve işaretlemeleri gizleyin
         const errors = document.querySelectorAll('.error');
         const exclamationMarks = document.querySelectorAll('.exclamation');
         errors.forEach(error => error.classList.add('none'));
         exclamationMarks.forEach(exclamation => exclamation.classList.add('none'));
 
-        // İsim ve soyisim alanlarının boş olup olmadığını kontrol edin
         if (firstNameInput.value.trim() === '') {
             const firstNameError = firstNameInput.nextElementSibling.nextElementSibling;
             const firstNameExclamation = firstNameInput.nextElementSibling;
@@ -30,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
             lastNameExclamation.classList.remove('none');
         }
 
-        // E-posta adresinin doğruluğunu kontrol edin
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(emailInput.value.trim())) {
             const emailError = emailInput.nextElementSibling.nextElementSibling;
@@ -39,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
             emailExclamation.classList.remove('none');
         }
 
-        // Şifre alanının boş olup olmadığını kontrol edin
         if (passwordInput.value.trim() === '') {
             const passwordError = passwordInput.nextElementSibling.nextElementSibling;
             const passwordExclamation = passwordInput.nextElementSibling;
