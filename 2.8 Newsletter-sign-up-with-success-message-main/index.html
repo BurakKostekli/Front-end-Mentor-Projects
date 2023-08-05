@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>Sign Up!</title>
+</head>
+
+<body>
+    <main class="container" id="container">
+        <div class="container__box-1">
+            <h1 class="heading-1">Stay Updated!</h1>
+            <p class="description-1">Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="container__list">
+                <li class="container__item"><img src="./assets/images/icon-list.svg" alt="icon"
+                        class="container__icon-1">
+                    <p>Product discovery and
+                        building what matters</p>
+                </li>
+                <li class="container__item"><img src="./assets/images/icon-list.svg" alt="icon"
+                        class="container__icon-1">
+                    <p>Measuring to ensure
+                        updates are a success</p>
+                </li>
+                <li class="container__item"><img src="./assets/images/icon-list.svg" alt="icon"
+                        class="container__icon-1">
+                    <p>And much
+                        more!</p>
+                </li>
+            </ul>
+
+            <form class="container__form" id="form">
+                <div class="container__form__label">Email adress</div>
+                <input type="email" class="container__form__input" placeholder="email@company.com" id="input"></input>
+                <button class="button-1" type="submit">Subscribe to monthly newsletter</button>
+            </form>
+
+        </div>
+
+        <div class="container__box-2">
+            <picture class="container__box-2__image">
+                <source media="(max-width: 24em)" srcset="./assets/images/illustration-sign-up-mobile.svg">
+                <img srcset="./assets/images/illustration-sign-up-desktop.svg" alt="Resim B">
+            </picture>
+        </div>
+    </main>
+
+    <section class="success hidden" id="success">
+        <img src="./assets/images/icon-success.svg" alt="Success" class="success__image">
+        <h1 class="heading-1">Thanks for subscribing!</h1>
+        <p class="description-1">A confirmation email has been sent to ash@loremcompany.com.
+            Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button type="submit" class="button-1 margin-b">Dismiss message</button>
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
+
+
+<!-- <picture class="container__box-2__image">
+    <source
+        srcset="./assets/images/illustration-sign-up-mobile.svg 1x, ./assets/images/illustration-sign-up-desktop.svg 2x"
+        media="(max-width: 50em)">
+    <img srcset="./assets/images/illustration-sign-up-mobile.svg 1x, ./assets/images/illustration-sign-up-desktop.svg 2x"
+        alt="Full logo" src="./assets/images/illustration-sign-up-desktop.svg 2x">
+</picture> -->

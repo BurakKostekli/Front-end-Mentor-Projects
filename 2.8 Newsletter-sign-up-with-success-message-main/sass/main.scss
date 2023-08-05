@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint ==phone {
+        @media(max-width: 50em) {
+            @content; // 790px
+        }
+    }
+
+    @if $breakpoint ==small-phone {
+        @media(max-width: 24em) {
+            @content; // 375px
+        }
+    }
+}
+
+
+$color-primary-tomato: hsl(4, 100%, 67%);
+$color-slate-gray: hsl(234, 29%, 20%);
+$color-charcoal-gray: hsl(235, 18%, 26%);
+$color-gray: hsl(231, 7%, 60%);
+$color-white: hsl(0, 0%, 100%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-slate-gray;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 3rem;
+
+    @include respond(phone) {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    &__box-1 {
+        padding-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45%;
+
+        @include respond(phone) {
+            order: 2;
+            width: 100%;
+            padding: 2rem;
+        }
+    }
+
+    &__list {}
+
+    &__item {
+        font-size: 1.6rem;
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__icon-1 {
+        margin-right: 2rem;
+    }
+
+    &__form {
+        margin-top: 5rem;
+
+        &__label {
+            font-size: 1.3rem;
+            font-family: "Roboto-Bold", sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        &__input {
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 1.8rem 2rem;
+            border-radius: 10px;
+            border: 1px solid $color-gray;
+            outline: none;
+            cursor: pointer;
+
+            &:focus {
+                border: 1px solid black;
+            }
+
+            &::placeholder {
+                color: $color-gray;
+            }
+        }
+    }
+
+    &__box-2 {
+
+        @include respond(phone) {
+            order: 1;
+            width: 100%;
+            display: none;
+        }
+
+        @include respond(small-phone) {
+            display: block;
+        }
+
+        &__image {
+            @include respond(phone) {
+                width: 100%;
+                border-radius: 1rem;
+            }
+
+            @include respond(small-phone) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.success {
+    background-color: white;
+    padding: 6rem;
+    border-radius: 3rem;
+    width: 500px;
+
+    @include respond(small-phone) {
+        width: 100%;
+    }
+
+    &__image {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+// COMPONENTS
+
+.heading-1 {
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 5.5rem;
+    margin-bottom: 2rem;
+    line-height: 1;
+    color: $color-slate-gray;
+
+    @include respond(phone) {
+        font-size: 4rem;
+        margin-top: 2rem;
+    }
+}
+
+.description-1 {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.button-1 {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2rem;
+    font-size: 1.4rem;
+    letter-spacing: .7px;
+    font-family: "Roboto-Bold", sans-serif;
+    border: none;
+    border-radius: 10px;
+    color: $color-white;
+    cursor: pointer;
+
+    background-image: linear-gradient(to left bottom, $color-slate-gray, $color-slate-gray);
+
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "Subscribe to monthly newsletter";
+        position: absolute;
+        padding-top: 2rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to left bottom, #ff6257, #f5365e);
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    &:hover::before {
+        background-image: linear-gradient(to left bottom, #ff6257, #fd5858, #fb4e5a, #f8425c, #f5365e);
+        opacity: 1;
+    }
+
+    &:hover {
+        box-shadow: 5px 1.5rem 2rem rgba(255, 98, 87, .25);
+    }
+}
+
+.margin-b {
+    margin-bottom: 1rem;
+}
+
+.hidden {
+    display: none;
+}

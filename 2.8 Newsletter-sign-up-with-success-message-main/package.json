@@ -1,0 +1,14 @@
+{
+  "name": "newsletter",
+  "version": "1.0.0",
+  "description": "newsletter page",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "burak",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
