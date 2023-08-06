@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap"
+        rel="stylesheet">
+
+    <title>Age Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <form id="form">
+            <div class="input-box">
+                <div class="input-box__boxes">
+                    <label for="input_day" class="input-box__label">DAY</label>
+                    <input type="number" placeholder="DD" id="input_day" class="input-box__input inputt">
+                    <p class="error" id="errorDay"></p>
+                </div>
+                <div class="input-box__boxes">
+                    <label for="input_month" class="input-box__label">MONTH</label>
+                    <input type="number" placeholder="MM" id="input_month" class="input-box__input inputt">
+                    <p class="error" id="errorMonth"></p>
+                </div>
+                <div class="input-box__boxes">
+                    <label for="input_year" class="input-box__label">YEAR</label>
+                    <input type="number" placeholder="YYYY" id="input_year" class="input-box__input inputt">
+                    <p class="error" id="errorYear"></p>
+                </div>
+            </div>
+
+            <div class="arrow-box">
+                <div class="arrow-box__line"></div>
+                <button type="submit" class="arrow-box__button" id="button"><img src="./assets/images/icon-arrow.svg"
+                        alt="arrow" class="arrow-box__button__image"></button>
+            </div>
+
+            <div class="age">
+                <p class="age__desc">
+                    <span class="age__span" id="year">- -</span> years
+                </p>
+                <p class="age__desc">
+                    <span class="age__span" id="month">- -</span> months
+                </p>
+                <p class="age__desc">
+                    <span class="age__span" id="day">- -</span> days
+                </p>
+            </div>
+        </form>
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
