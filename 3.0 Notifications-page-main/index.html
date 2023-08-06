@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Notifications-Page</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="notification">
+            <div class="notification__heading-box">
+                <h2 class="notification__heading">Notifications</h2>
+                <div class="notification__number-box" id="numberBox">3</div>
+            </div>
+            <p class="notification__mark" id="mark">Mark all as read</p>
+        </div>
+
+
+        <div class="box">
+            <img src="./assets/images/avatar-mark-webber.webp" alt="avatar" class="box__avatar">
+            <div class="box__description-box">
+                <p class="box__description"><span class="name-color">Mark Webber</span> reacted to your recent post
+                    <span class="desc-color">My first tournament today!</span> <span class="box__red-dot"></span>
+                </p>
+                <p class="box__time">1m ago</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./assets/images/avatar-angela-gray.webp" alt="avatar" class="box__avatar">
+            <div class="box__description-box">
+                <p class="box__description"><span class="name-color">Angela Gray</span> followed you <span
+                        class="box__red-dot"></span>
+                </p>
+                <p class="box__time">5m ago</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./assets/images/avatar-jacob-thompson.webp" alt="avatar" class="box__avatar">
+            <div class="box__description-box">
+                <p class="box__description"><span class="name-color">Jacob Thompson</span> has joined your group
+                    <span class="group-color">Chess Club</span> <span class="box__red-dot"></span>
+                </p>
+                <p class="box__time">1 day ago</p>
+            </div>
+        </div>
+
+        <div class="box box-read">
+            <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="avatar" class="box__avatar">
+            <div class="box__description-box">
+                <p class="box__description"><span class="name-color">Rizky Hasanuddin</span> sent you a private
+                    message </p>
+                <p class="box__time">5 days ago</p>
+                <p class="box__message">
+                    Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+                    I'm already having lots of fun and improving my game.
+                </p>
+            </div>
+        </div>
+
+        <div class="box box-read">
+            <img src="./assets/images/avatar-kimberly-smith.webp" alt="avatar" class="box__avatar">
+            <div class="box__description-box">
+                <p class="box__description"><span class="name-color">Kimberly Smith</span> commented on your picture
+                </p>
+                <p class="box__time">1 week ago</p>
+            </div>
+            <img src="./assets/images/image-chess.webp" alt="your photo" class="box__picture">
+        </div>
+
+        <div class="box box-read">
+            <img src="./assets/images/avatar-nathan-peterson.webp" alt="avatar" class="box__avatar">
+            <div class="box__description-box">
+                <p class="box__description"><span class="name-color">Nathan Peterson</span> reacted to your recent
+                    post
+                    <span class="desc-color">5 end-game strategies to increase your win rate</span>
+                </p>
+                <p class="box__time">2 weeks ago</p>
+            </div>
+        </div>
+
+        <div class="box box-read">
+            <img src="./assets/images/avatar-anna-kim.webp" alt="avatar" class="box__avatar">
+            <div class="box__description-box">
+                <p class="box__description"><span class="name-color">Anna Kim</span> left the group <span
+                        class="group-color">Chess Club</span>
+                </p>
+                <p class="box__time">2 weeks ago</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

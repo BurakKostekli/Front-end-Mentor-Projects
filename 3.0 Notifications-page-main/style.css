@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7fafd;
+  min-height: 100vh; }
+
+.container {
+  width: 730px;
+  background-color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem; }
+  @media (max-width: 25em) {
+    .container {
+      width: 100%;
+      border-radius: 0; } }
+
+.notification {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  margin-top: 2rem; }
+  .notification__heading-box {
+    display: flex;
+    align-items: end; }
+  .notification__heading {
+    color: #1c202b;
+    margin-right: 1rem;
+    font-size: 2.5rem;
+    line-height: 1; }
+  .notification__number-box {
+    display: inline-block;
+    background-color: #1c202b;
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: .5rem 1rem;
+    height: min-content;
+    border-radius: 5px; }
+  .notification__mark {
+    font-size: 1.6rem;
+    color: #5e6778;
+    cursor: pointer; }
+    .notification__mark:hover {
+      color: #173d84; }
+
+.box {
+  display: flex;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background-color: #f7fafd;
+  border-radius: 1rem;
+  display: flex; }
+  .box:not(:last-child) {
+    margin-bottom: 1rem; }
+  .box__avatar {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem; }
+  .box__description-box {
+    font-size: 1.6rem;
+    color: #5e6778;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    width: 100%; }
+  .box__red-dot {
+    background-color: #f65351;
+    display: inline-block;
+    width: .8rem;
+    height: .8rem;
+    align-self: center;
+    margin-left: 3px;
+    border-radius: 50%; }
+  .box__time {
+    color: #939dae; }
+  .box__message {
+    border: 2px solid #e5effa;
+    border-radius: 5px;
+    padding: 2rem;
+    margin-top: 1rem;
+    cursor: pointer; }
+    .box__message:hover {
+      background-color: #e5effa; }
+  .box__picture {
+    height: 4.5rem; }
+
+.name-color {
+  font-weight: 800;
+  color: #1c202b;
+  margin-right: 4px;
+  cursor: pointer; }
+  .name-color:hover {
+    color: #173d84; }
+
+.desc-color {
+  font-weight: 800;
+  color: #5e6778;
+  margin-left: 2px;
+  cursor: pointer; }
+  .desc-color:hover {
+    color: #173d84; }
+
+.group-color {
+  font-weight: 800;
+  color: #173d84;
+  cursor: pointer; }
+
+.box-read {
+  background-color: white; }

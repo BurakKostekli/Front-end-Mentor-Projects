@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+$color-red: hsl(1, 90%, 64%);
+$color-blue: rgb(23, 61, 132);
+
+$color-white: hsl(0, 0%, 100%);
+$color-very-light-grayish-blue: hsl(210, 60%, 98%);
+$color-light-grayish-blue-1: hsl(211, 68%, 94%);
+$color-light-grayish-blue-2: hsl(205, 33%, 90%);
+$color-grayish-blue: hsl(219, 14%, 63%);
+$color-dark-grayish-blue: hsl(219, 12%, 42%);
+$color-very-dark-blue: hsl(224, 21%, 14%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint ==phone {
+        @media(max-width:25em) {
+            @content; // 400px
+        }
+    }
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-very-light-grayish-blue;
+    min-height: 100vh;
+}
+
+.container {
+    width: 730px;
+    background-color: $color-white;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+
+    @include respond(phone) {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+.notification {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+
+    &__heading-box {
+        display: flex;
+        align-items: end;
+    }
+
+    &__heading {
+        color: $color-very-dark-blue;
+        margin-right: 1rem;
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    &__number-box {
+        display: inline-block;
+        background-color: $color-very-dark-blue;
+        color: $color-white;
+        font-size: 1.6rem;
+        line-height: 1;
+        padding: .5rem 1rem;
+        height: min-content;
+        border-radius: 5px;
+    }
+
+    &__mark {
+        font-size: 1.6rem;
+        color: $color-dark-grayish-blue;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-blue;
+        }
+    }
+}
+
+
+
+.box {
+    display: flex;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: $color-very-light-grayish-blue;
+    border-radius: 1rem;
+    display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &__avatar {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 2rem;
+    }
+
+    &__description-box {
+        font-size: 1.6rem;
+        color: $color-dark-grayish-blue;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+        width: 100%;
+    }
+
+    &__red-dot {
+        background-color: $color-red;
+        display: inline-block;
+        width: .8rem;
+        height: .8rem;
+        align-self: center;
+        margin-left: 3px;
+        border-radius: 50%;
+    }
+
+    &__time {
+        color: $color-grayish-blue;
+    }
+
+    &__message {
+        border: 2px solid $color-light-grayish-blue-1;
+        border-radius: 5px;
+        padding: 2rem;
+        margin-top: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-light-grayish-blue-1;
+        }
+    }
+
+    &__picture {
+        height: 4.5rem;
+    }
+
+}
+
+
+
+
+
+
+
+.name-color {
+    font-weight: 800;
+    color: $color-very-dark-blue;
+    margin-right: 4px;
+
+    cursor: pointer;
+
+    &:hover {
+        color: $color-blue;
+    }
+}
+
+.desc-color {
+    font-weight: 800;
+    color: $color-dark-grayish-blue;
+    margin-left: 2px;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-blue;
+    }
+}
+
+.group-color {
+    font-weight: 800;
+    color: $color-blue;
+    cursor: pointer;
+}
+
+.box-read {
+    background-color: white;
+}
