@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+$color-red: hsl(0, 100%, 66%);
+$color-white: hsl(0, 0%, 100%);
+$color-light-violet: hsl(270, 3%, 87%);
+$color-dark-violet: hsl(279, 6%, 55%);
+$color-verydark-violet: hsl(278, 68%, 11%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint ==tab {
+        @media(max-width:63em) {
+            @content; // 1000px
+        }
+    }
+
+    @if $breakpoint ==phone {
+        @media(max-width:48em) {
+            @content; // 765px
+        }
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: "Space Grotesk", sans-serif;
+    display: flex;
+
+    @include respond(phone) {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container1 {
+    background-image: url(/images/bg-main-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 33%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: $color-white;
+
+    @include respond(phone) {
+        width: 100vw;
+        height: 200px;
+    }
+
+    &__card-box {
+        position: absolute;
+        left: 25%;
+        width: 36vw;
+        height: max-content;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        @include respond(phone) {
+            width: 90vw;
+            position: static;
+            height: 100%;
+        }
+    }
+
+    &__card-front {
+        background-image: url(images/bg-card-front.png);
+        background-size: cover;
+        height: 230px;
+        margin-bottom: 4rem;
+        border-radius: 1rem;
+        height: 16vw;
+        padding: 3rem;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-between;
+        box-shadow: rgba(0, 0, 0, 0.25) 5px 20px 35px;
+
+        @include respond(phone) {
+            position: absolute;
+            width: 280px;
+            height: 150px;
+            padding: 2rem;
+            left: 2rem;
+            z-index: 1;
+            top: 10rem;
+            box-shadow: rgba(0, 0, 0, 0.25) 5px 10px 35px;
+        }
+    }
+
+    &__logo {
+        width: 5vw;
+
+        @include respond(phone) {
+            width: 60px;
+        }
+    }
+
+    &__box-box {}
+
+
+    &__bottom-box {
+        display: flex;
+        justify-content: space-between;
+        font-size: .8vw;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        @include respond(phone) {
+            font-size: 1rem;
+        }
+    }
+
+    &__card-numbers {
+        margin-bottom: 2vw;
+        font-size: 1.8vw;
+        letter-spacing: 2px;
+
+        @include respond(tab) {
+            font-size: 1.5vw;
+            margin-bottom: 1vw;
+        }
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__card-back {
+        background-image: url(/images/bg-card-back.png);
+        background-size: cover;
+        background-position: center;
+        height: 230px;
+        border-radius: 1rem;
+        height: 16vw;
+        position: relative;
+        width: 30vw;
+        align-self: flex-end;
+        box-shadow: rgba(0, 0, 0, 0.25) 5px 20px 35px;
+        font-size: .8vw;
+
+        @include respond(phone) {
+            position: absolute;
+            width: 280px;
+            height: 150px;
+            padding: 2rem;
+            right: 2rem;
+            font-size: 1rem;
+        }
+    }
+
+    &__card-cv {
+        position: absolute;
+        right: 12%;
+        top: 46%;
+
+        @include respond(phone) {
+            top: 45%;
+        }
+    }
+}
+
+.container2 {
+    width: 66%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab) {
+        justify-content: flex-end;
+    }
+
+    @include respond(phone) {
+        width: 100vw;
+        padding-top: 8rem;
+        justify-content: center;
+    }
+
+    &__form-container {
+        width: 380px;
+
+        @include respond(tab) {
+            margin-right: 2rem;
+        }
+
+        @include respond(phone) {
+            margin-right: 0;
+            padding: 0 2rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: .7rem;
+        color: $color-verydark-violet;
+    }
+
+    &__input {
+        margin-bottom: 2rem;
+        border: 1px solid $color-light-violet;
+        border-radius: 1rem;
+        padding: 1.1rem 1.5rem;
+        font-size: 1.6rem;
+        font-family: "Space Grotesk", sans-serif;
+        outline: none;
+
+        &::placeholder {
+            color: $color-light-violet;
+        }
+
+        &:focus {
+            border-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+            border-image-slice: 1;
+        }
+    }
+
+
+    &__form-bottom {
+        display: flex;
+    }
+
+    &__form-box {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__half-input {
+        width: 42%;
+        margin-top: 1rem;
+
+        margin-bottom: 2rem;
+        border: 1px solid $color-light-violet;
+        border-radius: 1rem;
+        padding: 1.1rem 1.5rem;
+        font-size: 1.6rem;
+        font-family: "Space Grotesk", sans-serif;
+        outline: none;
+
+        &::placeholder {
+            color: $color-light-violet;
+        }
+
+        &:focus {
+            border-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+            border-image-slice: 1;
+        }
+
+        &:last-child {
+            margin-left: 6%;
+        }
+    }
+
+    &__inputrem {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    &__wrong-format {
+        padding-bottom: 1rem;
+        transform: translateY(-10px);
+        color: $color-red;
+        font-size: 1.2rem;
+        display: none;
+    }
+}
+
+.complete {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    &__logo {
+        width: 100px;
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__desc {
+        font-size: 1.5rem;
+        color: $color-dark-violet;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+.red-border {
+    border-color: $color-red !important;
+}
+
+.display-error {
+    display: block !important;
+}
+
+
+.button {
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+    border: none;
+    background-color: $color-verydark-violet;
+    color: $color-light-violet;
+    font-family: "Space Grotesk", sans-serif;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: .5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.button-mobile {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}

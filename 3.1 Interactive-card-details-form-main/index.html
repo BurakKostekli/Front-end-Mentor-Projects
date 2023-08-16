@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>Interactive card details form</title>
+</head>
+
+<body>
+    <div class="container1">
+        <div class="container1__card-box">
+            <div class="container1__card-front">
+                <img src="./images/card-logo.svg" alt="logo" class="container1__logo">
+                <div class="container1__box-box">
+                    <p class="container1__card-numbers" id="cardNumber">0000 0000 0000 0000</p>
+                    <div class="container1__bottom-box">
+                        <p class="container1__card-name" id="cardName">Jane Appleseed</p>
+                        <p class="container1__card-date" id="cardDate">00/00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container1__card-back">
+                <p class="container1__card-cv" id="cardCvc">000</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container2">
+        <div class="container2__form-container" id="formContainer">
+            <form class="container2__form" id="form">
+                <label for="inputName" class="container2__label">Cardholder name</label>
+                <input type="text" placeholder="e.g. Jane Appleseed" id="inputName" class="container2__input"
+                    maxlength="34">
+                <p class="container2__wrong-format" id="nameError">Wrong format, letters only</p>
+                <label for="inputNumber" class="container2__label">Card number</label>
+                <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="inputNumber" class="container2__input"
+                    maxlength="19">
+                <p class="container2__wrong-format" id="numberError">Wrong format, numbers only</p>
+                <div class="container2__form-bottom">
+                    <div class="container2__form-box">
+                        <label for="inputMonth" class="container2__label">exp. date [mm/yy]</label>
+                        <div class="container2__flex">
+                            <input type="text" placeholder="MM" id="inputMonth" class="container2__half-input"
+                                maxlength="2">
+                            <input type="text" placeholder="YY" id="inputYear" class="container2__half-input"
+                                maxlength="2">
+                        </div>
+                        <p class="container2__wrong-format" id="dateError">can't be blank</p>
+                    </div>
+                    <div class="container2__form-box">
+                        <label for="inputMonth" class="container2__label">cvc</label>
+                        <input type="text" placeholder="e.g. 123" id="inputCvc"
+                            class="container2__input container2__inputrem" maxlength="3">
+                        <p class="container2__wrong-format" id="cvcError">can't be blank</p>
+                    </div>
+                </div>
+                <button type="submit" class="button">Confirm</button>
+            </form>
+        </div>
+
+        <div class="complete hidden" id="complete">
+            <img src="./images/icon-complete.svg" alt="complete" class="complete__logo">
+            <h2 class="complete__heading">thank you!</h2>
+            <p class="complete__desc">We-ve added your card details</p>
+            <button type="submit" class="button button-mobile">Continue</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
