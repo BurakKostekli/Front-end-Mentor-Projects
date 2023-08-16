@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+$color-purple: hsl(259, 100%, 65%);
+$color-red: hsl(0, 100%, 67%);
+
+$color-white: hsl(0, 0%, 100%);
+$color-off-white: hsl(0, 0%, 94%); // bg
+$color-light-gray: hsl(0, 0%, 86%);
+$color-smokey-gray: hsl(0, 1%, 44%);
+$color-off-black: hsl(0, 0%, 8%);
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint ==tab {
+        @media(max-width:48em) {
+            @content; // 768px
+        }
+    }
+
+    @if $breakpoint ==phone {
+        @media(max-width:35em) {
+            @content; // 550px
+        }
+    }
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(phone) {
+        font-size: 40%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: $color-off-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: $color-white;
+    display: inline-block;
+    padding: 5rem;
+    border-radius: 2rem 2rem 20rem 2rem;
+
+    @include respond(tab) {
+        padding: 3rem;
+        margin: 2rem;
+    }
+
+    @include respond(phone) {
+        padding-top: 5rem;
+        width: 100%;
+    }
+}
+
+.input-box {
+    display: flex;
+
+    @include respond(phone) {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    &__boxes {
+        position: relative;
+        margin-top: 1.5rem;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: -2.5rem;
+        left: 0;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: $color-smokey-gray;
+        font-size: 1.1rem;
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+    }
+
+    &__input {
+        width: 150px;
+        font-size: 3.2rem;
+        padding: 1rem 2rem;
+        outline: none;
+        border: 1px solid $color-light-gray;
+        border-radius: 1rem;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+
+        @include respond(phone) {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        &::placeholder {
+            color: $color-smokey-gray;
+        }
+
+        &:focus {
+            border: 1px solid black;
+        }
+    }
+}
+
+.arrow-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(phone) {
+        height: 65px;
+        margin-bottom: 4rem;
+    }
+
+    &__line {
+        height: 1px;
+        background-color: $color-light-gray;
+        width: 100%;
+    }
+
+    &__button {
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+
+        @include respond(phone) {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        &__image {
+            background-color: $color-purple;
+            padding: 20px;
+            border-radius: 50%;
+            transition: all .2s;
+
+            @include respond(phone) {
+                width: 65px;
+                padding: 20px;
+            }
+        }
+
+        &:hover &__image {
+            background-color: $color-off-black;
+        }
+    }
+}
+
+.age {
+    font-size: 9rem;
+    line-height: 1;
+    padding-right: 15rem;
+
+    @include respond(tab) {
+        padding-right: 0;
+        font-size: 7rem;
+    }
+
+    &__desc {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: italic;
+    }
+
+    &__span {
+        color: $color-purple;
+    }
+}
+
+
+
+
+// ERRORS
+
+//BOX ERROR STATES
+
+.red-border {
+    border: 1px solid $color-red;
+}
+
+.red-color {
+    color: $color-red;
+}
+
+// ERROR DESCRİPTİONS
+
+.error {
+    margin-top: .5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    color: $color-red;
+}
+
+.hidden {
+    display: none;
+}
