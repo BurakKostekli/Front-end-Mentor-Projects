@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__first">
+            <img class="navbar__first__logo" src="./images/logo.svg" alt="logo">
+            <ul class="navbar__first__list">
+
+                <li class="navbar__first__item" id="itemFeature"><a href="#"
+                        class="navbar__first__item__a">Features</a><img src="./images/icon-arrow-down.svg" alt="arrow"
+                        class="navbar__first__item__img farrow"><img src="./images/icon-arrow-up.svg" alt="arrow"
+                        class="navbar__first__item__img farrow hidden">
+                </li>
+                <div class="navbar__first__menu-dropdown locate1 hidden" id="features">
+                    <a href="#"><img src="./images/icon-todo.svg" alt="calendar">Todo List</a>
+                    <a href="#"><img src="./images/icon-calendar.svg" alt="calendar two">Calendar</a>
+                    <a href="#"><img src="./images/icon-reminders.svg" alt="bell">Reminders</a>
+                    <a href="#"><img src="./images/icon-planning.svg" alt="plan">Planning</a>
+                </div>
+
+                <li class="navbar__first__item"><a href="#" class="navbar__first__item__a"
+                        id="itemCompany">Company</a><img src="./images/icon-arrow-down.svg" alt="arrow"
+                        class="navbar__first__item__img sarrow"><img src="./images/icon-arrow-up.svg" alt="arrow"
+                        class="navbar__first__item__img sarrow hidden">
+                </li>
+                <div class="navbar__first__menu-dropdown locate2 hidden" id="company">
+                    <a href="#">History</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Blog</a>
+                </div>
+                <li class="navbar__first__item"><a href="#" class="navbar__first__item__a">Careers</a></li>
+                <li class="navbar__first__item"><a href="#" class="navbar__first__item__a">About</a></li>
+            </ul>
+        </div>
+        <div class="navbar__second">
+            <a href="#" class="navbar__second__item">Login</a>
+            <a href="#" class="navbar__second__item">Register</a>
+        </div>
+    </nav>
+
+
+
+    <div class="menu">
+        <img src="./images/icon-menu.svg" alt="menu" class="menu__button">
+        <img src="./images/icon-close-menu.svg" alt="menu" class="menu__button hidden">
+    </div>
+
+    <img src="./images/logo.svg" alt="logo" class="mobile-logo">
+
+    <main class="main">
+        <div class="container1">
+            <h1 class="container1__heading">Make <br class="none"> remote work</h1>
+            <p class="container1__desc">Get your team in sync, no matter your location. streamline processes, create
+                team rituals, and watch productivity soar.</p>
+            <button class="container1__button" type="button">Learn more</button>
+            <div class="container1__brands">
+                <img src="./images/client-databiz.svg" alt="databiz" class="container1__brand">
+                <img src="./images/client-audiophile.svg" alt="audiophile" class="container1__brand">
+                <img src="./images/client-meet.svg" alt="meet" class="container1__brand">
+                <img src="./images/client-maker.svg" alt="maker" class="container1__brand">
+            </div>
+        </div>
+        <div class="container2">
+            <picture>
+                <source media="(min-width: 800px)" srcset="./images/image-hero-desktop.png" class="container2__img">
+                <img src="./images/image-hero-mobile.png" alt="logo" class="container2__img">
+            </picture>
+
+        </div>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
