@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>Blogr Landing Page</title>
+</head>
+
+<body>
+
+    <div class="mobile-nav">
+        <img src="./images/logo.svg" alt="logo" class="mobile-nav__logo">
+        <img src="./images/icon-hamburger.svg" alt="icon-hamburger" class="mobile-nav__hamb">
+        <img src="./images/icon-close.svg" alt="icon-hamburger" class="mobile-nav__hamb hidden">
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar__first">
+            <img src="./images/logo.svg" alt="logo" class="navbar__logo">
+
+            <a href="#" class="navbar__item">Product <img src="./images/icon-arrow-light.svg" alt="arrow"
+                    class="navbar__arrow">
+                <img src="./images/icon-arrow-dark.svg" alt="arrow" class="navbar__arrow-dark">
+                <div class="navbar__dropdown locate1">
+                    <a href="#" class="navbar__dropdown__item">Overview</a>
+                    <a href="#" class="navbar__dropdown__item">Pricing</a>
+                    <a href="#" class="navbar__dropdown__item">Marketplace</a>
+                    <a href="#" class="navbar__dropdown__item">Features</a>
+                    <a href="#" class="navbar__dropdown__item">Integrations</a>
+                </div>
+            </a>
+
+            <a href="#" class="navbar__item">Company <img src="./images/icon-arrow-light.svg" alt="arrow"
+                    class="navbar__arrow">
+                <img src="./images/icon-arrow-dark.svg" alt="arrow" class="navbar__arrow-dark">
+                <div class="navbar__dropdown locate2">
+                    <a href="#" class="navbar__dropdown__item">About</a>
+                    <a href="#" class="navbar__dropdown__item">Team</a>
+                    <a href="#" class="navbar__dropdown__item">Blog</a>
+                    <a href="#" class="navbar__dropdown__item">Careers</a>
+                </div>
+            </a>
+
+            <a href="#" class="navbar__item">Connect <img src="./images/icon-arrow-light.svg" alt="arrow"
+                    class="navbar__arrow">
+                <img src="./images/icon-arrow-dark.svg" alt="arrow" class="navbar__arrow-dark">
+                <div class="navbar__dropdown locate3">
+                    <a href="#" class="navbar__dropdown__item">Contact</a>
+                    <a href="#" class="navbar__dropdown__item">Newsletter</a>
+                    <a href="#" class="navbar__dropdown__item">LinkedIn</a>
+                </div>
+            </a>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="navbar__second">
+            <a href="#" class="navbar__second__item hover">Login</a>
+            <a href="#" class="navbar__second__item button-sign">Sign up</a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header__heading">
+            A modern publishing platform
+        </div>
+        <div class="header__desc">
+            Grow your audience and build your online brand
+        </div>
+        <div class="header__button-box">
+            <a href="#" class="button1">Start For Free</a>
+            <a href="#" class="button2 ml">Learn More</a>
+        </div>
+    </header>
+
+    <section class="section1">
+        <div class="heading special">
+            Designed for the future
+        </div>
+
+        <div class="section1__box">
+            <div class="section1__box-1">
+                <div class="title">Introducing an extensible editor</div>
+                <div class="description">Blogr features an exceedingly intuitive interface which lets you focus on one
+                    thing: creating content. The editor supports management of multiple blogs and allows easy
+                    manipulation of embeds such as images,
+                    videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality
+                    or change the looks of a blog.
+                </div>
+                <div class="title">Robust content management</div>
+                <div class="description">Flexible content management enables users to easily move through posts.
+                    Increase the usability of your blog by adding customized categories, sections, format, or flow. With
+                    this functionality, you’re in full control.
+                </div>
+            </div>
+            <div class="section1__box-2">
+                <picture>
+                    <source media="(max-width: 750px)" srcset="./images/illustration-editor-mobile.svg">
+                    <source media="(min-width: 751px)" srcset="./images/illustration-editor-desktop.svg">
+                    <img src="./images/illustration-editor-desktop.svg" alt="desktop" class="section1__img">
+                </picture>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="section2__box-1">
+            <img src="./images/illustration-phones.svg" alt="phones" class="section2__img">
+        </div>
+        <div class="section2__box-2">
+            <div class="heading white-c mb-3">State of the Art Infrastructure</div>
+            <div class="description white-c">
+                With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+                connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your
+                site competitive.
+            </div>
+        </div>
+    </section>
+
+    <section class="section3">
+
+        <div class="section3__box-1">
+            <picture>
+                <source media="(max-width: 750px)" srcset="./images/illustration-laptop-mobile.svg"
+                    class="section3__img">
+                <source media="(min-width: 751px)" srcset="./images/illustration-laptop-desktop.svg"
+                    class="section3__img">
+                <img src="./images/illustration-laptop-desktop.svg" alt="desktop" class="section3__img">
+            </picture>
+        </div>
+        <div class="section3__box-2">
+            <div class="title">Free, open, simple</div>
+            <div class="description">Blogr is a free and open source application backed by a large community of helpful
+                developers. It supports features such as code syntax highlighting, RSS feeds, social media integration,
+                third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and
+                is relatively easy to learn.
+            </div>
+            <div class="title">Powerful tooling</div>
+            <div class="description">Batteries included. We built a simple and straightforward CLI tool that makes
+                customization and deployment a breeze, but capable of producing even the most complicated sites.
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__box">
+            <img src="/images/logo.svg" alt="logo" class="footer__logo">
+        </div>
+        <div class="footer__box">
+            <span class="footer__title">Product</span>
+            <a href="#" class="footer__button">Overview</a>
+            <a href="#" class="footer__button">Pricing</a>
+            <a href="#" class="footer__button">Marketplace</a>
+            <a href="#" class="footer__button">Features</a>
+            <a href="#" class="footer__button">Integrations</a>
+        </div>
+        <div class="footer__box">
+            <span class="footer__title">Company</span>
+            <a href="#" class="footer__button">About</a>
+            <a href="#" class="footer__button">Team</a>
+            <a href="#" class="footer__button">Blog</a>
+            <a href="#" class="footer__button">Careers</a>
+        </div>
+        <div class="footer__box">
+            <span class="footer__title">Connect</span>
+            <a href="#" class="footer__button">Contact</a>
+            <a href="#" class="footer__button">Newsletter</a>
+            <a href="#" class="footer__button">LinkedIn</a>
+        </div>
+    </footer>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
