@@ -1,0 +1,798 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+$color-light-red: hsl(356, 100%, 66%); // CTA TEXT
+$color-verylight-red: hsl(355, 100%, 74%); // CTA HOVER BACKGROUND
+$color-verydark-blue: hsl(208, 49%, 24%); // Headings
+
+$color-white: hsl(0, 0%, 100%);
+$color-white-op: rgba(255, 255, 255, 0.859);
+$color-grayish-blue: hsl(240, 2%, 79%); // FOOTER TEXT
+$color-darkgrayish-blue: hsl(207, 13%, 34%); // BODY COPY
+$color-darkblack-blue: hsl(240, 10%, 16%); // FOOTER BG
+
+$color-purple: #383B58;
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint ==special {
+        @media(max-width:87em) {
+            @content; // 1400px
+        }
+    }
+
+    @if $breakpoint ==desktop {
+        @media(max-width:80em) {
+            @content; // 1250px
+        }
+    }
+
+    @if $breakpoint ==padding {
+        @media(max-width:62em) {
+            @content; // 1000px
+        }
+    }
+
+    @if $breakpoint ==tab {
+        @media(max-width:47em) {
+            @content; // 750px
+        }
+    }
+}
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond (desktop) {
+        font-size: 50%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.logoo {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 100px;
+}
+
+.rotate {
+    transform: rotateX(180deg) !important;
+}
+
+
+// NAVBAR
+
+.mobile-nav {
+    display: none;
+
+    @include respond(tab) {
+        z-index: 4;
+        display: flex !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem 3rem;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__logo {
+        width: 100px;
+    }
+
+    &__hamb {
+        cursor: pointer;
+    }
+}
+
+.hr {
+    width: 80%;
+    background-color: $color-grayish-blue;
+    height: 1px;
+    margin-bottom: 3rem;
+    display: none;
+
+    @include respond(tab) {
+        display: block;
+    }
+
+}
+
+.navbar {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 4rem;
+    padding: 0 150px;
+    height: 40px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    @include respond(padding) {
+        padding: 0 75px;
+    }
+
+    @include respond(tab) {
+        padding: 4rem 0;
+        top: 50px;
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+        height: max-content;
+        flex-direction: column;
+        background-color: $color-white;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    &__first {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        @include respond(tab) {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__logo {
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 6rem;
+        }
+
+        @include respond(tab) {
+            display: none;
+        }
+    }
+
+    &__item {
+        text-decoration: none;
+        font-weight: 500;
+        color: $color-white-op;
+        margin-right: 4rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        @include respond(tab) {
+            margin-bottom: 2rem;
+            color: $color-verydark-blue;
+            margin-right: 0;
+            justify-content: center;
+            transform: translateX(8px);
+            font-size: 17px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__arrow {
+        margin-left: 5px;
+        transform: translateY(2px);
+        align-self: center;
+        margin: auto 5px;
+
+        @include respond(tab) {
+            display: none;
+        }
+    }
+
+    &__arrow-dark {
+        display: none;
+
+        @include respond(tab) {
+            display: block;
+            align-self: center;
+            margin: auto 5px;
+        }
+    }
+
+
+    &__second {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        @include respond(tab) {
+            flex-direction: column;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 3rem;
+
+                @include respond(tab) {
+                    margin-right: 0;
+                    font-size: 18px !important;
+                }
+            }
+
+            text-decoration: none;
+            font-weight: 500;
+            color: $color-white-op;
+            cursor: pointer;
+
+            @include respond(tab) {
+                color: $color-verydark-blue;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    // DROPDOWN MENU
+
+    .locate1 {
+        top: 40px;
+        left: 300px;
+
+        @include respond(padding) {
+            left: 225px;
+        }
+    }
+
+    .locate2 {
+        top: 40px;
+        left: 420px;
+
+        @include respond(padding) {
+            left: 335px;
+        }
+    }
+
+    .locate3 {
+        top: 40px;
+        left: 530px;
+
+        @include respond(padding) {
+            left: 455px;
+        }
+    }
+
+    .navbar__dropdown {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        background-color: $color-white;
+        border-radius: 5px;
+        padding: 2rem 2rem;
+        width: 130px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 1rem;
+
+        @include respond(tab) {
+            position: static;
+            padding: 0;
+            justify-content: flex-start;
+            background-color: transparent;
+            box-shadow: none;
+            background-color: rgb(236, 236, 236);
+            font-weight: 500;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+
+        }
+
+        &__item {
+            text-decoration: none;
+            color: $color-verydark-blue;
+
+            &:hover {
+                font-weight: 700;
+
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            @include respond(tab) {
+                margin-bottom: 1rem;
+                color: $color-darkgrayish-blue;
+            }
+        }
+    }
+}
+
+.button-sign {
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    background-color: $color-white;
+    color: $color-light-red;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .2s;
+    font-size: 1.5rem;
+
+    &:hover {
+        background-color: $color-verylight-red;
+        color: $color-white;
+    }
+
+    @include respond(tab) {
+        color: $color-white;
+        font-size: 15px;
+        background: linear-gradient(45deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    }
+}
+
+.button1 {
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    background-color: $color-white;
+    color: $color-light-red;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .2s;
+    font-size: 1.5rem;
+
+    &:hover {
+        background-color: $color-verylight-red;
+        color: $color-white;
+    }
+}
+
+.button2 {
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    background-color: transparent;
+    color: $color-white;
+    border: 1px solid $color-white;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .2s;
+    font-size: 1.5rem;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-verylight-red;
+    }
+}
+
+.ml {
+    margin-left: 1rem;
+}
+
+
+
+
+// HEADER
+
+.header {
+    background: linear-gradient(45deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    height: 500px;
+    overflow: hidden;
+    border-radius: 0 0 0 70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -1050px;
+        left: -350px;
+        width: 2500px;
+        height: 2500px;
+        background-image: url("/images/bg-pattern-intro-desktop.svg");
+        background-size: cover;
+        z-index: 0;
+    }
+
+    &__heading {
+        font-size: 5rem;
+        color: $color-white;
+        margin-bottom: 2rem;
+        z-index: 2;
+
+        @include respond(tab) {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+    }
+
+    &__desc {
+        font-size: 16px;
+        color: $color-white;
+        margin-bottom: 4rem;
+        z-index: 2;
+
+        @include respond(tab) {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
+    &__button-box {
+        z-index: 2;
+    }
+
+}
+
+.hover:hover {
+    text-decoration: underline;
+}
+
+.special {
+    transform: translateY(100px);
+
+    @include respond(desktop) {
+        transform: translateY(40px);
+    }
+
+    @include respond(padding) {
+        transform: translateY(25px);
+    }
+
+    @include respond(tab) {
+        transform: translateY(0);
+        padding: 5rem 0;
+    }
+}
+
+
+
+
+
+// COMPONENTS
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+
+    @include respond(tab) {
+        font-size: 3rem;
+    }
+}
+
+.title {
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    color: $color-verydark-blue;
+
+    @include respond (desktop) {
+        margin-bottom: 1rem;
+    }
+
+    @include respond(tab) {
+        text-align: center;
+    }
+}
+
+.description {
+    line-height: 2;
+    font-size: 1.6rem;
+    color: hsl(0, 0%, 55%);
+
+    &:not(:last-child) {
+        margin-bottom: 8rem;
+
+        @include respond (desktop) {
+            margin-bottom: 3rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    @include respond(tab) {
+        text-align: center !important;
+    }
+}
+
+
+
+
+// SECTION 1
+
+.section1 {
+    width: 100%;
+    padding: 0 150px;
+    margin-bottom: 6rem;
+    position: relative;
+    overflow-x: hidden;
+
+    @include respond(padding) {
+        padding: 0 75px;
+    }
+
+    @include respond(tab) {
+        padding: 0 3rem;
+        text-align: center;
+        margin-bottom: 230px;
+    }
+
+    &__img {
+        @include respond(tab) {
+            width: 100%;
+        }
+    }
+
+    &__box {
+        display: flex;
+
+        @include respond(tab) {
+            flex-direction: column;
+        }
+    }
+
+    &__box-1 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include respond(padding) {
+            padding-top: 8rem;
+        }
+
+        @include respond(tab) {
+            order: 2;
+            width: 100%;
+        }
+    }
+
+    &__box-2 {
+        width: 50%;
+        padding-left: 5vw;
+
+        @include respond(desktop) {
+            padding-left: 0;
+        }
+
+        @include respond(tab) {
+            order: 1;
+            width: 100%;
+        }
+    }
+
+    &__img {
+        height: 55vw;
+        transform: translateX(50px);
+
+        @include respond(desktop) {
+            transform: translateX(100px);
+        }
+
+        @include respond(tab) {
+            height: auto;
+            width: 100%;
+            transform: translateX(0);
+        }
+    }
+}
+
+
+.white-color {
+    color: $color-white-op;
+    text-align: left;
+}
+
+.white-c {
+    color: $color-white-op;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+
+
+
+// SECTION 2
+
+.section2 {
+    background-color: $color-purple;
+    background-image: url(images/bg-pattern-circles.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-y: -500px;
+    background-position-x: -200px;
+    position: relative;
+    border-radius: 0 100px 0 100px;
+
+    display: flex;
+    padding: 0 150px;
+    margin-bottom: 10rem;
+    height: 400px;
+
+    @include respond(padding) {
+        padding: 0 75px;
+    }
+
+    @include respond(tab) {
+        padding: 0 3rem;
+        flex-direction: column;
+        background-size: 150%;
+        background-position-y: -250px;
+        background-position-x: center;
+        height: min-content;
+        padding-bottom: 2rem;
+    }
+
+    .section2__box-1 {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(tab) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        transform: translateX(-3.5rem);
+        width: 100%;
+
+        @include respond(tab) {
+            transform: translateX(0);
+            width: 350px;
+            position: absolute;
+            top: -150px;
+        }
+    }
+
+    .section2__box-2 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include respond(tab) {
+            width: 100%;
+            padding: 200px 3rem 0 3rem;
+            text-align: center;
+            align-items: center;
+        }
+    }
+}
+
+.section3 {
+    display: flex;
+    padding: 0 150px;
+    margin-bottom: 10rem;
+
+    @include respond(padding) {
+        padding: 0 75px;
+    }
+
+    @include respond(tab) {
+        padding: 0 3rem;
+        flex-direction: column;
+    }
+
+    &__box-1 {
+        width: 50%;
+
+        @include respond(tab) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__img {
+        height: 50vw;
+        transform: translateX(-375px);
+
+        @include respond(padding) {
+            transform: translateX(-249px);
+        }
+
+        @include respond(tab) {
+            height: auto;
+            width: 100%;
+            object-fit: contain;
+            transform: translateX(0);
+        }
+    }
+
+    &__box-2 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include respond(tab) {
+            padding-top: 2rem;
+            width: 100%;
+        }
+    }
+}
+
+
+
+// FOOTER
+
+.footer {
+    padding: 5rem 150px;
+    background-color: $color-darkblack-blue;
+    display: flex;
+    justify-content: space-between;
+    color: $color-white;
+    font-size: 1.4rem;
+    border-radius: 0 100px 0 0;
+
+    @include respond(padding) {
+        padding: 5rem 75px;
+    }
+
+    @include respond(tab) {
+        padding: 5rem 3rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        min-width: 15%;
+
+        @include respond(tab) {
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__button {
+        text-decoration: none;
+        color: $color-grayish-blue;
+        margin-bottom: 1rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__title {
+        color: $color-white;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    &__logo {
+        width: 100px;
+    }
+}
