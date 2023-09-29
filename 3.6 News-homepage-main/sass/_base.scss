@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../assets/fonts/static/font-3.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../assets/fonts/static/font-1.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../assets/fonts/static/font-2.ttf') format('truetype');
+    font-weight: 800;
+}
+
+// - Font size (paragraph): 15px
+// - Weights: 400, 700, 800
+
+
+// VARIABLES
+:root {
+    --color-primary: hsl(35, 77%, 62%);
+    --color-secondary: hsl(5, 85%, 63%);
+
+    --color-off-white: hsl(36, 100%, 99%);
+    --color-grayish-blue: hsl(233, 8%, 79%);
+    --color-darkgrayish-blue: hsl(236, 13%, 42%);
+    --color-very-dark-blue: hsl(240, 100%, 5%);
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint ==largest {
+        @media(max-width:75em) {
+            @content; // 1200px
+        }
+    }
+
+    @if $breakpoint ==large {
+        @media(max-width:65.5em) {
+            @content; // 1050px
+        }
+    }
+
+    @if $breakpoint ==medium {
+        @media(max-width:54.5em) {
+            @content; // 875px
+        }
+    }
+}
+
+// html {
+//     font-size: 62.5%;
+//     @include respond(medium) {
+//         font-size: 50%;
+//     }
+// }
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(largest) {
+        font-size: 56%;
+    }
+
+    @include respond(large) {
+        font-size: 50%;
+    }
+
+    @include respond(medium) {
+        font-size: 56%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "CustomFont", sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
