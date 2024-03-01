@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+    --color-primary: hsl(263, 55%, 52%);
+    --color-dark-gray: hsl(217, 19%, 35%);
+    --color-black-gray: hsl(219, 29%, 14%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --color-light-gray: hsl(0, 0%, 81%);
+    --color-light-grayishblue: hsl(210, 46%, 95%);
+    --color-light-grayishblue-2: rgba(236, 242, 248, 0.5);
+    --color-light-grayishblue-3: rgba(236, 242, 248, 0.7);
+
+    --color-dark-gray-2: rgba(72, 85, 106, 0.51);
+    --color-dark-gray-3: rgba(72, 85, 106, 0.704);
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint ==tab {
+        @media(max-width:76.5em) {
+            @content; // 1230px
+        }
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-light-grayishblue);
+    min-height: 100vh;
+
+    @include respond(tab) {
+        align-items: start;
+    }
+}
+
+// Note for text colors:
+// - Font size: 13px
+// 1. "Verified Graduate" has the same color as the person's name with 50% opacity
+// 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
