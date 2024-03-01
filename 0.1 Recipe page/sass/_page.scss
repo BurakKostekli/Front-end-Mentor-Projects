@@ -1,0 +1,156 @@
+.heading-1 {
+    font-family: displayFont;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-top: 1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        line-height: 1.2;
+        margin-top: 22rem;
+    }
+}
+
+.heading-2 {
+    color: $color-secondary;
+    font-family: displayFont;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.heading-3 {
+    font-size: 2rem;
+    color: $color-secondary;
+    font-weight: 600;
+}
+
+
+.header {
+    display: grid;
+    row-gap: 1rem;
+
+    &__img {
+        width: 100%;
+        border-radius: 2rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 0;
+        }
+        
+    }
+
+    &__text {
+        font-size: 1.6rem;
+    }
+}
+
+
+.preparation {
+    padding-left: 4rem;
+    color: $color-secondary;
+    background-color: $color-secodary-light;
+    border-radius: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    &__list {
+        margin-top: 1.5rem;
+        padding-left: 1.5rem;
+
+        b {
+            color: $color-Wenge-Brown;
+            margin-left: 2rem;
+            font-weight: 700;
+        }
+
+        span {
+            color: $color-Dark-Charcoal;
+        }
+    }
+
+    &__item {
+        margin-bottom: .5rem;
+    }
+}
+
+
+.ingredients {
+    color: $color-secondary;
+    font-weight: 400;
+
+    &__item {
+        margin-bottom: .5rem;
+        padding-left: 1.5rem;
+        span {
+            color: $color-Wenge-Brown;
+        }
+    }
+}
+
+
+.instructions {
+    padding: 2.5rem 0;
+    border-top: 1px solid rgba(95, 87, 78, .4);
+    border-bottom: 1px solid rgba(95, 87, 78, .4);
+    
+    &__list {
+        color: $color-secondary;
+        font-weight: 700;
+    }
+
+    &__item {
+        padding-left: 1.5rem;
+        font-weight: 700;
+        color: $color-secondary;
+        margin-bottom: .5rem;
+
+        b {
+            font-weight: 700;
+            color: $color-Wenge-Brown;
+        }
+
+        span {
+            color: $color-Wenge-Brown;
+            font-weight: 400;
+        }
+    }
+}
+
+
+.nutrition {
+    font-weight: 400;
+    color: $color-Wenge-Brown;
+
+    &__box {
+        padding-top: 2rem;
+    }
+
+    &__store {
+        display: inline-block;
+        width: 49%;
+        padding-bottom: .8rem;
+        padding-top: .8rem;
+        padding-left: 2rem;
+
+        &-1 {
+            font-weight: 400;
+            color: $color-Wenge-Brown;
+        }
+
+        &-2 {
+            color: $color-secondary;
+            font-weight: 700;
+        }
+    }
+
+    &__line {
+        height: 1px;
+        width: 100%;
+        background-color: rgba(95, 87, 78, .2);
+    }
+}
+
+
+

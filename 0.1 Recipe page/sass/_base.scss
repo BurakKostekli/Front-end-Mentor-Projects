@@ -1,0 +1,82 @@
+@font-face {
+    font-family: displayFont;
+    src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+} // 400
+
+@font-face {
+    font-family: textFont;
+    src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+} // 400 600 700
+
+// - Font size (paragraph): 16px
+
+// COLORS
+$color-primary : hsl(14, 45%, 36%);
+$color-secondary : rgb(123, 40, 79);
+$color-secodary-light : rgba(123, 40, 79, .07);
+
+$color-White: hsl(0, 0%, 100%);
+$color-Rose-White: hsl(330, 100%, 98%);
+$color-Eggshell: hsl(30, 54%, 90%);
+$color-Light-Grey: hsl(30, 18%, 87%);
+$color-Wenge-Brown: rgb(95, 87, 78);
+$color-Dark-Charcoal: hsl(24, 5%, 18%);
+
+$bp-large : 60em;
+$bp-medium : 24em;
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 45%;
+    }
+
+
+}
+
+body {
+    font-family: textFont;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 1.6rem;
+
+    background-color: $color-Eggshell;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    margin-top: 8rem;
+    background-color: $color-White;
+    color: $color-Dark-Charcoal;
+    padding: 5rem;
+    border-radius: 3rem;
+    position: relative;
+
+    display: grid;
+    row-gap: 3rem;
+    grid-template-rows: min-content;
+
+    @media only screen and (max-width: $bp-large) {
+        max-width:none;
+        width: 100vw;
+        margin: 0;
+        border-radius: 0;
+    }
+}
