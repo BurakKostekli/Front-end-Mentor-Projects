@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+:root {
+  --color-pale-blue: hsl(243, 100%, 93%);
+  --color-grayish-blue: hsl(229, 7%, 55%);
+  --color-dark-blue: hsl(228, 56%, 26%);
+  --color-verydark-blue: hsl(229, 57%, 11%);
+  --color-white: white;
+  --color-gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: var(--color-verydark-blue);
+  background-image: url(../images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400; }
+  @media (max-width: 46.5em) {
+    body {
+      background-image: url(../images/bg-mobile.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: center; } }
+
+.container {
+  height: 175px;
+  width: 1000px;
+  border-radius: 1rem 30% 1rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  margin: 2rem;
+  transform: translateY(-40px); }
+  @media (max-width: 46.5em) {
+    .container {
+      flex-direction: column;
+      height: max-content;
+      align-items: center; } }
+
+.cont1 {
+  width: 320px;
+  margin-right: 3rem;
+  display: flex;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 25px; }
+  @media (max-width: 46.5em) {
+    .cont1 {
+      margin-right: 0; } }
+  @media (max-width: 22em) {
+    .cont1 {
+      width: 100%; } }
+  .cont1__fylo {
+    width: 200px;
+    height: 100%;
+    padding: 3.5rem 0 3.5rem 3.5rem;
+    background-color: var(--color-dark-blue);
+    border-radius: 1rem 0 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 2.5rem; }
+  .cont1__box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 175px;
+    height: 100%;
+    border-radius: 0 50% 1rem 0;
+    background-color: var(--color-dark-blue);
+    z-index: -10; }
+
+.cont2 {
+  flex: 1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 25px;
+  background-color: var(--color-dark-blue);
+  border-radius: 1rem;
+  height: 75%;
+  padding: 3rem;
+  position: relative; }
+  @media (max-width: 46.5em) {
+    .cont2 {
+      margin-top: 2rem; } }
+
+.bold {
+  font-weight: 700 !important; }
+
+.small {
+  font-size: 1.2rem;
+  color: var(--color-grayish-blue);
+  margin-left: 1rem; }
+
+.fylo__img {
+  width: 120px;
+  grid-row: 1 / 2;
+  grid-column: 1 / 4; }
+
+.fylo__box {
+  border-radius: 1rem;
+  background-color: var(--color-verydark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.use__storage {
+  width: 100%;
+  font-size: 1.4rem;
+  color: var(--color-pale-blue);
+  margin-bottom: 1rem; }
+
+.use__perbox {
+  width: 100%; }
+
+.use__per1 {
+  display: block;
+  height: 20px;
+  width: 100%;
+  background-color: var(--color-verydark-blue);
+  border-radius: 2rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem; }
+
+.use__per2 {
+  display: block;
+  width: 81.5%;
+  border-radius: 2rem;
+  height: 14px;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  margin: 0 3px 0 3px;
+  z-index: 10;
+  position: relative; }
+
+.use__perdot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-pale-blue);
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  border-radius: 50%; }
+
+.use__counts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5rem;
+  font-size: 1.4rem;
+  color: var(--color-pale-blue); }
+
+.white-box {
+  position: absolute;
+  top: -60px;
+  right: 3rem;
+  background-color: var(--color-white);
+  font-size: 4rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  border-radius: 1rem 1rem 0 1rem; }
+  @media (max-width: 46.5em) {
+    .white-box {
+      border-radius: 1rem;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: max-content; } }
+  .white-box__box-1 {
+    display: flex;
+    align-items: center; }
+  .white-box__box-2 {
+    background-color: var(--color-white);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    bottom: -20px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%); }
+    @media (max-width: 46.5em) {
+      .white-box__box-2 {
+        display: none; } }

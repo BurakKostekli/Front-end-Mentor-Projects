@@ -1,0 +1,123 @@
+.bold {
+    font-weight: 700 !important;
+}
+
+.small {
+    font-size: 1.2rem;
+    color: var(--color-grayish-blue);
+    margin-left: 1rem;
+}
+
+
+
+
+.fylo {
+    &__img {
+        width: 120px;
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+    }
+
+    &__box {
+        border-radius: 1rem;
+        background-color: var(--color-verydark-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.use {
+    &__storage {
+        width: 100%;
+        font-size: 1.4rem;
+        color: var(--color-pale-blue);
+        margin-bottom: 1rem;
+    }
+
+
+    &__perbox {
+        width: 100%;
+    }
+
+    &__per1 {
+        display: block;
+        height: 20px;
+        width: 100%;
+        background-color: var(--color-verydark-blue);
+        border-radius: 2rem;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        border-radius: 1rem;
+    }
+
+    &__per2 {
+        display: block;
+        width: 81.5%;
+        border-radius: 2rem;
+        height: 14px;
+        background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+        margin: 0 3px 0 3px;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__perdot {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-pale-blue);
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        border-radius: 50%;
+    }
+
+    &__counts {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: .5rem;
+        font-size: 1.4rem;
+        color: var(--color-pale-blue);
+    }
+}
+
+.white-box {
+    position: absolute;
+    top: -60px;
+    right: 3rem;
+    background-color: var(--color-white);
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 1.5rem;
+    border-radius: 1rem 1rem 0 1rem;
+
+    @include respond(phone) {
+        border-radius: 1rem;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+    }
+
+    &__box-1 {
+        display: flex;
+        align-items: center;
+    }
+
+    &__box-2 {
+        background-color: var(--color-white);
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 0;
+        bottom: -20px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+}
