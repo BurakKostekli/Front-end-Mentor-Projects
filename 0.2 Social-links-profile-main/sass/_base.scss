@@ -1,0 +1,39 @@
+@font-face {
+    font-family: baseFont;
+    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+} // 400 600 700
+
+// - Font size (paragraph): 16px
+
+// COLORS
+$color-White: hsl(0, 0%, 100%);
+$color-Grey: hsl(0, 0%, 20%);
+$color-Dark-Grey: hsl(0, 0%, 12%);
+$color-Off-Black: hsl(0, 0%, 8%);
+$color-Green: hsl(75, 94%, 57%);
+
+$bp-one : 28em;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: baseFont;
+}
+
+body {
+    background-color: $color-Off-Black;
+    color: $color-White;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

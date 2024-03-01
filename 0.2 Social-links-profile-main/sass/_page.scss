@@ -1,0 +1,69 @@
+.container {
+    background-color: $color-Dark-Grey;
+    border-radius: 1.5rem;
+    padding: 3.5rem;
+    font-size: 1.4rem;
+    min-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-one) {
+        min-width: 10rem;
+        width: 100%;
+        margin: 0 3rem;
+    }
+}
+
+.user {
+    display: grid;
+    grid-template-columns: max-content;
+    justify-items: center;
+    row-gap: .5rem;
+
+
+    &__img {
+        width: 10rem;
+        border-radius: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    &__heading {
+        font-weight: 500;
+    }
+
+    &__country {
+        color: $color-Green;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    &__job {
+        margin-bottom: 2rem;
+    }
+}
+
+
+.box {
+    display: grid;
+    row-gap: 2rem;
+    width: 100%;
+
+    &__link {
+        width: 100%;
+        background-color: $color-Grey;
+        color: $color-White;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 500;
+        transition: .2s all;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-White;
+            color: $color-Dark-Grey;
+        }
+    }
+}
