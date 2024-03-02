@@ -1,0 +1,52 @@
+@font-face {
+    font-family: baseFont;
+    src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+} // 400 600 700
+
+@font-face {
+    font-family: baseFontItalic;
+    src: url(/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+} // 
+
+// - Font size (paragraph): 16px
+
+// COLORS
+$color-White: hsl(0, 0%, 100%);
+$color-Light-pink: hsl(275, 100%, 97%);
+$color-Grayish-purple: rgb(140, 105, 145);
+$color-Dark-purple: rgb(47, 21, 51);
+
+$color-light-purple: rgb(183, 78, 197);
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: baseFont;
+
+    @media only screen and (max-width: 36em) {
+        font-size: 55%;
+    }
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-size: 50%;
+    position: relative;
+    background-color: $color-Light-pink;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

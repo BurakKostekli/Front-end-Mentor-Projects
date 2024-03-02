@@ -1,0 +1,115 @@
+.background {
+    height: 35vh;
+    width: 100%;
+    background: url(/assets/images/background-pattern-desktop.svg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+
+.container {
+    width: 55rem;
+
+    background-color: $color-White;
+    padding: 4rem;
+    padding-bottom: 0;
+    border-radius: 1.5rem;
+
+    @media only screen and (max-width: 36em) {
+        max-width: 55rem;
+        margin: 0 2rem;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    &__star {
+        width: 3.5rem;
+
+        @media only screen and (max-width: 36em) {
+            font-size: 3rem;
+        }
+    }
+
+    &__heading {
+        margin-left: 2rem;
+        font-size: 5rem;
+        font-weight: 700;
+        color: $color-Dark-purple;
+
+        @media only screen and (max-width: 36em) {
+            font-size: 4rem;
+        }
+    }
+}
+
+
+.question {
+    width: 100%;
+
+    &__box {
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+
+        &:not(:last-child) {
+            border-bottom:1px solid rgba(black, .05) ;
+        }
+    }
+
+    &__query-box {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        border: none;
+        color: $color-Dark-purple;
+        font-family: inherit;
+        font-weight: 600;
+        
+        @media only screen and (max-width: 36em) {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        transition: all .2s;
+
+        @media only screen and (max-width: 36em) {
+            width: 75%;
+        }
+    }
+
+    &__query-box:hover &__text {
+        color: $color-light-purple;
+    }
+
+    &__icon {
+        fill: yellow;
+    }
+
+    &__answer {
+        color: $color-Grayish-purple;
+        line-height: 1.5;
+        font-size: 1.6rem;
+        display: none;
+        padding-top: 1rem;
+    }
+}
+
+
+
+
+
+

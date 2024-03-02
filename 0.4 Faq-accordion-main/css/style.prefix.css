@@ -1,0 +1,142 @@
+@font-face {
+  font-family: baseFont;
+  src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: baseFontItalic;
+  src: url(/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: baseFont;
+}
+@media only screen and (max-width: 36em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: 50%;
+  position: relative;
+  background-color: hsl(275, 100%, 97%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  height: 35vh;
+  width: 100%;
+  background: url(/assets/images/background-pattern-desktop.svg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.container {
+  width: 55rem;
+  background-color: hsl(0, 0%, 100%);
+  padding: 4rem;
+  padding-bottom: 0;
+  border-radius: 1.5rem;
+}
+@media only screen and (max-width: 36em) {
+  .container {
+    max-width: 55rem;
+    margin: 0 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+}
+.container__head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.container__star {
+  width: 3.5rem;
+}
+@media only screen and (max-width: 36em) {
+  .container__star {
+    font-size: 3rem;
+  }
+}
+.container__heading {
+  margin-left: 2rem;
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgb(47, 21, 51);
+}
+@media only screen and (max-width: 36em) {
+  .container__heading {
+    font-size: 4rem;
+  }
+}
+
+.question {
+  width: 100%;
+}
+.question__box {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.question__box:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.question__query-box {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  color: rgb(47, 21, 51);
+  font-family: inherit;
+  font-weight: 600;
+}
+@media only screen and (max-width: 36em) {
+  .question__query-box {
+    text-align: left;
+  }
+}
+.question__text {
+  font-size: 1.6rem;
+  transition: all 0.2s;
+}
+@media only screen and (max-width: 36em) {
+  .question__text {
+    width: 75%;
+  }
+}
+.question__query-box:hover .question__text {
+  color: rgb(183, 78, 197);
+}
+.question__icon {
+  fill: yellow;
+}
+.question__answer {
+  color: rgb(140, 105, 145);
+  line-height: 1.5;
+  font-size: 1.6rem;
+  display: none;
+  padding-top: 1rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvX2Jhc2Uuc2NzcyIsInN0eWxlLmNvbXAuY3NzIiwiLi4vc2Fzcy9fcGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0kscUJBQUE7RUFDQSxzREFBQTtBQ0NKO0FERUE7RUFDSSwyQkFBQTtFQUNBLDZEQUFBO0FDQUo7QURlQTs7O0VBR0ksU0FBQTtFQUNBLFVBQUE7RUFDQSxtQkFBQTtBQ2JKOztBRGdCQTtFQUNJLGdCQUFBO0VBQ0Esc0JBQUE7RUFDQSxxQkFBQTtBQ2JKO0FEZUk7RUFMSjtJQU1RLGNBQUE7RUNaTjtBQUNGOztBRGVBO0VBQ0ksaUJBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtFQUNBLG9CQUFBO0VBQ0Esa0JBQUE7RUFDQSxxQ0FoQ2U7RUFrQ2YsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7QUNiSjs7QUNyQ0E7RUFDSSxZQUFBO0VBQ0EsV0FBQTtFQUNBLHdFQUFBO0VBQ0Esc0JBQUE7RUFDQSwyQkFBQTtFQUNBLGtCQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxZQUFBO0FEd0NKOztBQ3BDQTtFQUNJLFlBQUE7RUFFQSxrQ0ZIVTtFRUlWLGFBQUE7RUFDQSxpQkFBQTtFQUNBLHFCQUFBO0FEc0NKO0FDcENJO0VBUko7SUFTUSxnQkFBQTtJQUNBLGNBQUE7SUFDQSxhQUFBO0lBQ0EsbUJBQUE7RUR1Q047QUFDRjtBQ3JDSTtFQUNJLGFBQUE7RUFDQSxtQkFBQTtFQUNBLG1CQUFBO0FEdUNSO0FDcENJO0VBQ0ksYUFBQTtBRHNDUjtBQ3BDUTtFQUhKO0lBSVEsZUFBQTtFRHVDVjtBQUNGO0FDcENJO0VBQ0ksaUJBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxzQkY5Qlk7QUNvRXBCO0FDcENRO0VBTko7SUFPUSxlQUFBO0VEdUNWO0FBQ0Y7O0FDbENBO0VBQ0ksV0FBQTtBRHFDSjtBQ25DSTtFQUNJLG9CQUFBO0VBQ0EsbUJBQUE7QURxQ1I7QUNuQ1E7RUFDSSw0Q0FBQTtBRHFDWjtBQ2pDSTtFQUNJLFdBQUE7RUFDQSxlQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsOEJBQUE7RUFDQSw2QkFBQTtFQUNBLFlBQUE7RUFDQSxzQkYzRFk7RUU0RFosb0JBQUE7RUFDQSxnQkFBQTtBRG1DUjtBQ2pDUTtFQVpKO0lBYVEsZ0JBQUE7RURvQ1Y7QUFDRjtBQ2pDSTtFQUNJLGlCQUFBO0VBQ0Esb0JBQUE7QURtQ1I7QUNqQ1E7RUFKSjtJQUtRLFVBQUE7RURvQ1Y7QUFDRjtBQ2pDSTtFQUNJLHdCRjVFYTtBQytHckI7QUNoQ0k7RUFDSSxZQUFBO0FEa0NSO0FDL0JJO0VBQ0kseUJGdkZlO0VFd0ZmLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxhQUFBO0VBQ0EsaUJBQUE7QURpQ1IiLCJmaWxlIjoic3R5bGUucHJlZml4LmNzcyJ9 */
