@@ -1,0 +1,92 @@
+@font-face {
+  font-family: baseFont;
+  src: url(/assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: baseFont2;
+  src: url(/assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: baseFont2;
+}
+@media only screen and (max-width: 28em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(47, 88%, 63%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  border: 2px solid hsl(0, 0%, 7%);
+  box-shadow: 1rem 1rem 0 hsl(0, 0%, 7%);
+  padding: 2.5rem;
+  font-weight: 500;
+  transform: translateX(-1rem);
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 28em) {
+  .container {
+    max-width: none;
+    width: 90vw;
+  }
+}
+.container__img {
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+.container__subject {
+  background-color: hsl(47, 88%, 63%);
+  display: inline-block;
+  width: min-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.container__date {
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.container__heading {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+}
+.container__text {
+  color: hsl(0, 0%, 50%);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+.user__img {
+  margin-right: 1rem;
+  width: 4rem;
+}
+
+/*# sourceMappingURL=style.comp.css.map */

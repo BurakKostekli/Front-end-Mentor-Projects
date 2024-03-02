@@ -1,0 +1,62 @@
+.container {
+    background-color: $color-White;
+    border-radius: 2rem;
+    border: 2px solid $color-Black;
+    box-shadow: 1rem 1rem 0 $color-Black;
+    padding: 2.5rem;
+    font-weight: 500;
+    transform: translateX(-1rem);
+
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: 28em) {
+        max-width: none;
+        width: 90vw;
+    }
+
+    &__img {
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__subject {
+        background-color: $color-Yellow;
+        display: inline-block;
+        width: min-content;
+        padding: 1rem;
+        border-radius: .5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+
+    &__date {
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    &__heading {
+        font-size: 2.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        color: $color-Grey;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+}
+
+
+.user {
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+
+    &__img {
+        margin-right: 1rem;
+        width: 4rem;
+    }
+}
