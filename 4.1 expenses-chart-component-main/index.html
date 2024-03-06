@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  
+    <title>Frontend Mentor | Expenses chart component</title>
+</head>
+<body>
+    <main class="container">
+
+        <div class="balance">
+            <div class="balance__left-box">
+                <p class="balance__text">My balance</p>
+                <p class="balance__amount">$921.48</p>
+            </div>
+            <div class="balance__right-box">
+                <img src="/images/logo.svg" alt="Logo" class="balance__icon">
+            </div>
+        </div>
+
+        <div class="spend">
+            <p class="spend__text">Spending - Last 7 days</p>
+
+            <div class="chart">
+                <div class="chart__box" id="mon">
+                    <div class="chart__column">
+                        <div class="chart__color-box">
+                            <div class="chart__hover-box">$52.36</div>
+                        </div>
+                    </div>
+                    <div class="chart__day">mon</div>
+                </div>
+                <div class="chart__box" id="tue">
+                    <div class="chart__column">
+                        <div class="chart__color-box">
+                            <div class="chart__hover-box">$52.36</div>
+                        </div>
+                    </div>
+                    <div class="chart__day">tue</div>
+                </div>
+                <div class="chart__box" id="wed">
+                    <div class="chart__column">
+                        <div class="chart__color-box active">
+                            <div class="chart__hover-box">$52.36</div>
+                        </div>
+                    </div>
+                    <div class="chart__day">wed</div>
+                </div>
+                <div class="chart__box" id="thu">
+                    <div class="chart__column">
+                        <div class="chart__color-box">
+                            <div class="chart__hover-box">$52.36</div>
+                        </div>
+                    </div>
+                    <div class="chart__day">thu</div>
+                </div>
+                <div class="chart__box" id="fri">
+                    <div class="chart__column">
+                        <div class="chart__color-box">
+                            <div class="chart__hover-box">$52.36</div>
+                        </div>
+                    </div>
+                    <div class="chart__day">fri</div>
+                </div>
+                <div class="chart__box" id="sat">
+                    <div class="chart__column">
+                        <div class="chart__color-box">
+                            <div class="chart__hover-box">$52.36</div>
+                        </div>
+                    </div>
+                    <div class="chart__day">sat</div>
+                </div>
+                <div class="chart__box" id="sun">
+                    <div class="chart__column">
+                        <div class="chart__color-box">
+                            <div class="chart__hover-box">$52.36</div>
+                        </div>
+                    </div>
+                    <div class="chart__day">sun</div>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="spend__total">
+                <div class="spend__left-box">
+                    <p class="spend__totalText">Total this month</p>
+                    <p class="spend__totalAmount">$478.33</p>
+                </div>
+                <div class="spend__right-box">
+                    <p class="spend__percent">+2.4%</p>
+                    <p class="spend__totalText">from last month</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>

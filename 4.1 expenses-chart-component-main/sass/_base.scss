@@ -1,0 +1,48 @@
+// - Font size (paragraph): 16px
+
+// COLORS
+$color-Soft-red: hsl(10, 79%, 65%);
+$color-Cyan: hsl(186, 34%, 60%);
+
+$color-Dark-brown: hsl(25, 47%, 15%);
+$color-Medium-brown: rgb(147, 134, 123);
+$color-Cream: hsl(27, 66%, 92%);
+$color-Very-pale-orange: hsl(33, 100%, 98%);
+
+$color-line: rgba(147, 134, 123, .2);
+
+$color-Soft-red-op: rgba(236, 119, 95, .7);
+$color-Cyan-op: rgba(118, 181, 188, .7);
+
+// 400 700
+
+$bp-first : 30em; //475px
+$bp-second : 23em; //375px
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-first) {
+        font-size: 55%;
+    } 
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: "DM Sans", sans-serif;
+    background-color: gray;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
