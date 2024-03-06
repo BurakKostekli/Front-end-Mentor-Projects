@@ -1,0 +1,223 @@
+.box {
+    height: 275px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include respond(phone) {
+        height: 160px;
+    }
+
+    &__first {
+        height: 27%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: -12px;
+        right: 15px;
+
+        @include respond(phone) {
+            z-index: 10;
+        }
+    }
+
+    &__second {
+        height: 80%;
+        width: 100%;
+        background-color: var(--color-dark-blue);
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+        color: var(--color-white);
+        cursor: pointer;
+        transition: all .2s;
+        position: relative;
+
+        @include respond(phone) {
+            height: min-content;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, .60);
+        }
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    &__time {
+        font-size: 6rem;
+        font-weight: 300;
+        margin-top: 3rem;
+
+        @include respond(phone) {
+            margin-top: .5rem;
+            font-size: 3.5rem;
+        }
+    }
+
+    &__lasttime {
+        font-size: 1.4rem;
+        color: var(--color-pale-blue);
+        font-weight: 400;
+        margin-top: 2rem;
+
+        @include respond(phone) {
+            position: absolute;
+            top: 4.5rem;
+            right: 3rem;
+        }
+    }
+}
+
+
+.name {
+    grid-row: 1 / 3;
+    height: 100%;
+    background-color: var(--color-dark-blue);
+
+    @include respond(phone) {
+        height: max-content;
+        grid-row: 1 / 2;
+    }
+
+    &__first {
+        height: 70%;
+        background-color: var(--color-blue);
+        border-radius: 1.5rem;
+        padding: 3rem;
+
+        @include respond(phone) {
+            width: 100%;
+            display: flex;
+            padding: 2rem;
+            position: relative;
+        }
+    }
+
+    &__img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 3px solid var(--color-white);
+
+        @include respond(phone) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__small {
+        margin-top: 4rem;
+        margin-bottom: .5rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--color-pale-blue);
+
+        @include respond(phone) {
+            margin: 0;
+            padding-left: 2rem;
+            padding-top: 1rem;
+        }
+    }
+
+    &__name {
+        font-size: 4rem;
+        color: var(--color-white);
+
+        @include respond(phone) {
+            font-size: 2rem;
+            position: absolute;
+            left: 100px;
+            font-weight: 300;
+            top: 50px;
+        }
+    }
+
+
+    &__second {
+        padding: 3rem;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+
+        @include respond(phone) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2.5rem;
+        }
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-white);
+        font-size: 1.8rem;
+        color: var(--color-desaturated-blue);
+        transition: color .2s;
+
+        &:hover {
+            color: var(--color-white);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 2.2rem;
+
+            @include respond(phone) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+.work {
+    background-color: var(--color-light-red);
+}
+
+
+.play {
+    background-color: var(--color-soft-blue);
+}
+
+
+.study {
+    background-color: var(--color-light-red2);
+}
+
+
+.exercise {
+    background-color: var(--color-lime-green);
+}
+
+
+.social {
+    background-color: var(--color-violet);
+}
+
+
+.care {
+    background-color: var(--color-soft-orange);
+}
+
+
+
+
+
+
+
+/////////// SINGLE'S
+.active {
+    color: var(--color-white) !important;
+}

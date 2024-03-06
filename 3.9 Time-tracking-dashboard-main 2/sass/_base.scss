@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+// - Font size: 18px (card titles e.g. Work, Play)
+
+:root {
+    --color-blue: hsl(246, 80%, 60%);
+    --color-light-red: hsl(15, 100%, 70%); // work
+    --color-soft-blue: hsl(195, 74%, 62%); // play
+    --color-light-red2: hsl(348, 100%, 68%); // study
+    --color-lime-green: hsl(145, 58%, 55%); // Exercise
+    --color-violet: hsl(264, 64%, 52%); // social
+    --color-soft-orange: hsl(43, 84%, 65%); // Self care
+
+    --color-verydark-blue: hsl(226, 43%, 10%);
+    --color-dark-blue: hsl(235, 46%, 20%);
+    --color-desaturated-blue: hsl(235, 45%, 61%);
+    --color-pale-blue: hsl(236, 100%, 87%);
+    --color-white: #fff;
+
+    --color-desaturated-blue2: rgba(98, 107, 204, 0.638);
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint ==phone {
+        @media(max-width:37.5em) {
+            @content; // 600px
+        }
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-verydark-blue);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 275px repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, 275px);
+
+    grid-auto-rows: 275px;
+
+    gap: 2rem;
+    width: 1200px;
+    margin: 3rem;
+
+    @include respond(phone) {
+        grid-template-columns: minmax(275px, 1fr);
+        grid-template-rows: repeat(7, min-content);
+        justify-content: center;
+        row-gap: 2rem;
+    }
+}
