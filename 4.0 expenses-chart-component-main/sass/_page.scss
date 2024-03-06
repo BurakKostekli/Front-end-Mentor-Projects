@@ -1,0 +1,170 @@
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-Cream;
+    margin: 2rem 0;
+}
+
+.container {
+    width: 44rem;
+    background-color: transparent;
+
+    @media only screen and (max-width: $bp-first) {
+        width: 90vw;
+    } 
+
+    @media only screen and (max-width: $bp-second) {
+        width: 35rem;
+    } 
+}
+
+
+
+
+.balance {
+    background-color: $color-Soft-red;
+    border-radius: 1.5rem;
+    padding: 2rem 2.8rem;
+    color: $color-Very-pale-orange;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-first) {
+        padding: 2rem 2rem;
+    } 
+
+    &__text {
+        margin-bottom: .5rem;
+        font-size: 1.4rem;
+    }
+
+    &__amount {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    &__icon {
+        height: 4rem;
+    }
+}
+
+
+
+.spend {
+    background-color: $color-Very-pale-orange;
+    padding: 2.5rem 3.5rem;
+    border-radius: 1.5rem;
+
+    @media only screen and (max-width: $bp-first) {
+        padding: 3rem 2.5rem;
+    }
+
+    &__text {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    // chart
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__totalText {
+        color: $color-Medium-brown;
+        font-size: 1.5rem;
+    }
+
+    &__totalAmount {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+
+    &__right-box {
+        text-align: right;
+        align-self: flex-end;
+    }
+
+    &__percent {
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+}
+
+
+
+.chart {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(2.8rem, 1fr));
+    grid-template-rows: 18rem;
+    column-gap: 1.5rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__column {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: end;
+    }
+
+    &__color-box {
+        background-color: $color-Soft-red;
+        width: 100%;
+        height: 100%;
+        border-radius: .5rem;
+        cursor: pointer;
+        transition: .2s all;
+        position: relative;
+
+        &:hover {
+            background-color: $color-Soft-red-op;
+        }
+    }
+
+    &__hover-box {
+        background-color: $color-Dark-brown;
+        border-radius: .5rem;
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        padding: .5rem;
+        font-size: 1rem;
+        color: $color-Cream;
+        font-weight: 600;
+        // display: none;
+        opacity: 0;
+        transition: .2s all;
+    }
+
+    &__day {
+        color: $color-Medium-brown;
+        font-size: 1.4rem;
+        margin-top: .5rem;
+    }
+}
+
+
+
+
+
+.active {
+    background-color: $color-Cyan;
+
+    &:hover {
+        background-color: $color-Cyan-op;
+    }
+}
