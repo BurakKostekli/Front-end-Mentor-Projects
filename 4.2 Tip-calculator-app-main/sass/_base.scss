@@ -1,0 +1,76 @@
+:root {
+    --color-strong-cyan: hsl(172, 67%, 45%);
+    --color-strong-cyan-2: hsl(172,57%, 65%);
+    --color-strong-cyan-3: hsl(172, 60%, 40%);
+
+    --color-very-dark-cyan: hsl(183, 100%, 15%); 
+    --color-dark-grayish-cyan: hsl(186, 14%, 43%); 
+    --color-grayish-cyan: hsl(184, 14%, 56%); 
+    --color-light-grayish-cyan: hsl(185, 41%, 84%); 
+    --color-verylight-grayish-cyan: hsl(189, 41%, 97%); 
+    --color-white: hsl(0, 0%, 100%); 
+}
+
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint ==phone {
+        @media(max-width:51.5em) {
+            @content; // 824px
+        }
+    }
+
+    @if $breakpoint ==phone-small {
+        @media(max-width:28.5em) {
+            @content; // 454px
+        }
+    }
+
+    @if $breakpoint ==phone-very-small {
+        @media(max-width:22em) {
+            @content; // 365px
+        }
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(phone-small) {
+        font-size: 55%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    background-color: var(--color-light-grayish-cyan);
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.mt-2 {
+    margin-top: 1.5rem;
+}
+
+.mb-1 {
+
+    @include respond(phone) {
+        margin-bottom: 1rem !important;
+    }
+}

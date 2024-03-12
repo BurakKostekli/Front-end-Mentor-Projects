@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+  
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+    <form class="container">
+        <img src="/images/logo.svg" alt="Splitter" class="logo">
+
+        <div class="first">
+            <label class="first__label" for="bill">Bill</label>
+            <input class="first__input" type="text" id="bill" pattern="[0-9]+([.][0-9]+)?" placeholder="0">
+            <img src="/images/icon-dollar.svg" alt="dollar" class="first__icon first__icon--1">
+            </input>
+            
+            <label class="first__label mt-2 mb-1" for="custom">Select Tip %</label>
+            <div class="percentage">
+                <div class="percentage__box">5%</div>
+                <div class="percentage__box">10%</div>
+                <div class="percentage__box">15%</div>
+                <div class="percentage__box">25%</div>
+                <div class="percentage__box">50%</div>
+                <input class="percentage__box-input" type="text" id="custom" placeholder="Custom">Custom</input>
+            </div>
+
+            <label class="first__label" for="people">Number of People</label>
+            <input class="first__input" type="text" id="people" placeholder="0">
+            <img src="/images/icon-person.svg" alt="person" class="first__icon first__icon--2">
+            </input>
+        </div>
+
+        <div class="second">
+            <div class="second__box">
+                <p class="second__head">Tip Amount</p>
+                <p class="second__person">/ person</p>
+                <p class="second__money" id="firstMoney">$0.00</p>
+            </div>
+            <div class="second__box">
+                <p class="second__head">Total</p>
+                <p class="second__person">/ person</p>
+                <p class="second__money" id="secondMoney">$0.00</p>
+            </div>
+
+            <button class="second__button" type="button" title="Reset" id="reset">Reset</button>
+        </div>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
