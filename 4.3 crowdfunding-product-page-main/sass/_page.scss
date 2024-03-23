@@ -1,0 +1,227 @@
+// Container /////////////////////////////////////////////////////////////
+.container {
+    background-color: transparent;
+    height: min-content;  
+
+    margin: 22vw auto 7rem auto;
+    max-width: 75.5rem;
+
+    @include respond(big) {
+        margin: 22vw 2.5rem 7rem 2.5rem;
+    }
+
+    @include respond(tablet) {
+        margin: 60vw 2.5rem 7rem 2.5rem;
+    }
+
+    & > * {
+        background-color: var(--color-white);
+        border-radius: 1rem;
+        border: 2px solid var(--color-dark-gray-2);
+        padding: 5rem;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        @include respond(phone) {
+            padding: 4rem 3rem;
+        }
+    }
+}
+
+
+// FIRST SECTION //////////////////////////////////////////////////////////
+.first {
+    position: relative;
+
+    &__logo {
+        position: absolute;
+        top: -3rem;
+        left: 47%;
+
+        @include respond(tablet) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        padding-bottom: 1.5rem;
+        font-size: 2.8rem;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 4rem;
+    }
+
+    &__bookmark {
+        border-radius: 5rem;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: var(--color-dark-gray);
+
+        img {
+            fill: white;
+        }
+
+        span {
+            padding: 0 2.5rem 0 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: currentColor;
+
+            @include respond(tablet) {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+// SECOND SECTION //////////////////////////////////////////////////////////
+.second {
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include respond(big) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr), min-content;
+            justify-items: center;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include respond(big) {
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        
+        &:not(:first-child) {
+            padding-left: 6rem;
+
+            @include respond(big) {
+                padding-left: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid var(--color-dark-gray-2);
+
+            @include respond(big) {
+                border-right: none;
+                margin-bottom: 2rem;
+                padding-bottom: 2.5rem;
+                border-bottom: 1px solid var(--color-dark-gray-2);
+            }
+        }
+
+        p { 
+            font-size: 3.4rem;
+            font-weight: 700;
+        }
+
+        span {
+            font-size: 1.6rem;
+            color: var(--color-dark-gray);
+            margin-top: 1rem;
+        }
+    }
+
+    &__bar {
+        margin-top: 3rem;
+        height: 1.4rem;
+        background-color: var(--color-dark-gray-2);
+        border-radius: 3rem;
+
+        @include respond(big) {
+            margin-top: 3rem;
+        }
+    }
+
+    &__bar-color {
+        height: 1.4rem;
+        border-radius: 3rem;
+        background-color: var(--color-moderate-cyan);
+        width: 83%;
+    }
+}
+
+
+
+
+
+// THIRD SECTION //////////////////////////////////////////////////////////
+// .third {
+    
+// }
+
+.stand {
+    margin-top: 3rem;
+
+    &__box {
+        border: 1px solid var(--color-dark-gray-2);
+        border-radius: 1rem;
+        padding: 3.5rem 2.5rem;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        @include respond(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 5.2rem;
+        }
+    }
+
+    &__foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+
+        @include respond(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 10rem;
+        }
+    }
+
+    &__number {
+        font-size: 3.2rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--color-dark-gray);
+            font-weight: 400;
+            padding-left: 1rem;
+            line-height: .1;
+        }
+    }
+}
+
+
+
